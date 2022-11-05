@@ -17,7 +17,7 @@ Now, we have our database in vector with row and column, we can deal with invali
 
 #### Data Storage:
 
-We will construct our graph by vector and map. As We mentioned before, our initial database will be stored into the vector and the cost would be O(n) since the catalog is a constant we can treat as 1.  Then we will process our initial data by map, each airport will be a single vertex which classified data of corresponding rows in our initial database. And we will store it in a Map which will cost O(V^2), since it will store every airport (#V) and all of the reachable airports(#V reachable airports for each airport) it would be. 
+We will construct our graph by vector and map. As We mentioned before, our initial database will be stored into the vector and the cost would be $O(n)$ since the catalog is a constant we can treat as 1.  Then we will process our initial data by map, each airport will be a single vertex which classified data of corresponding rows in our initial database. And we will store it in a Map which will cost $O(V^2)$, since it will store every airport (#V) and all of the reachable airports(#V reachable airports for each airport) it would be. 
 
 ## Algorithm 
 #### Function Inputs
@@ -30,11 +30,11 @@ The expected output will be presented as a photo which contains all of the edges
 
 #### Function Efficiency 
 
-The time complexity of BFS is O(V + E).
+The time complexity of BFS is $O(V + E)$.
 
-The time complexity of Dijkstra’s Algorithm is O(V^2), but we can adjust the algorithm to reduce O((V+E)LogV).
+The time complexity of Dijkstra’s Algorithm is $O(V^2)$, but we can adjust the algorithm to reduce O((V+E)LogV).
 
-The time complexity of PageRank is O(V+E).
+The time complexity of PageRank is $O(V+E)$.
 
 V: Number of vertices
 	
