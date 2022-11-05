@@ -13,11 +13,11 @@ Team: Babybus
     
 3. **Respect** 
 
-    [1] Respected to everyone's opinions without aggravating words attack.
+    1. Respected to everyone's opinions without aggravating words attack.
     
-    [2] Keep listening if others are presenting his/she idea, asking questions once the speaking end.
+    2. Keep listening if others are presenting his/she idea, asking questions once the speaking end.
     
-    [3] An idea box will be created for everyone to throw ideas into it, and discuss when everyone is free.
+    3. An idea box will be created for everyone to throw ideas into it, and discuss when everyone is free.
     
 
 ## Collaboration
