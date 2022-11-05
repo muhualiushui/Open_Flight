@@ -15,9 +15,9 @@
 3. Github Link Creation (completed by all group members)
 ## Problems Encountered 
 
-Difficulties in trying to understand the datasets and algorithms.
+1. Difficulties in trying to understand the datasets and algorithms.
 
-Don’t know how to divide a huge task into smaller problems.
+2. Don’t know how to divide a huge task into smaller problems.
 
 ## Plans for next week
 We plan to establish our basic data set like data selection and implement it into our coding work. Moreover, we plan to complete the BFS traversal to make sure the rest functions would debug depending on our traversal.
