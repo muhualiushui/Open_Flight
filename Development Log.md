@@ -1,4 +1,4 @@
-# Development Log (Date: 30/10/2022 -- 4/11/2022)
+# Development Log 1 (Date: 30/10/2022 -- 4/11/2022)
 
 ## Weekly Goals
 1. Finish the team contract, project proposal, and github link that is due on 5/11/2022.
