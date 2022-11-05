@@ -23,3 +23,4 @@ Don’t know how to divide a huge task into smaller problems.
 We plan to establish our basic data set like data selection and implement it into our coding work. Moreover, we plan to complete the BFS traversal to make sure the rest functions would debug depending on our traversal.
 
 ## Optional: Questions for mentor
+None.
