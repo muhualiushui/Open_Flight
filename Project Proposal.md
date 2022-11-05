@@ -32,7 +32,7 @@ The expected output will be presented as a photo which contains all of the edges
 
 The time complexity of BFS is $O(V + E)$.
 
-The time complexity of Dijkstra’s Algorithm is $O(V^2)$, but we can adjust the algorithm to reduce O((V+E)LogV).
+The time complexity of Dijkstra’s Algorithm is $O(V^2)$, but we can adjust the algorithm to reduce $O((V+E)LogV)$.
 
 The time complexity of PageRank is $O(V+E)$.
 
