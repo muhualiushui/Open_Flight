@@ -1,0 +1,14 @@
+CXX=clang++
+INCLUDES=-Iincludes/
+CXX_FLAGS=-std=c++20 -gdwarf-4 -fstandalone-debug -Wall -Wextra -Werror -pedantic $(INCLUDES)
+
+exec: bin/exec
+
+bin/exec: ./entry/main.cpp ./src/Transform.cpp ./includes/Transform.h ./includes/Database.h
+${CXX} ${CXX_FLAGS} ./entry/main.cpp ./src/Transform.cpp -o ./bin/exec
+
+.DEFAULT_GOAL := main
+.PHONY: clean exec
+
+clean:
+	rm -fr bin/* obj/*
