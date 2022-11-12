@@ -1,8 +1,8 @@
-#ifndef DATABASE_HPP
-#define DATABASE_HPP
 #include <iostream>
 #include <vector>
 #include <map>
+#pragma once
+
 using namespace std;
 //This class use to initial store data which we want and we need to use in the following functions
 //each struct corresponding to one of the data shows in Data package
@@ -22,10 +22,12 @@ class Database{
 
     struct Airlines{//this is support 
         int ID;
-        int frequency;//frequency of routes in this airline
+        string name;
+        string active;
     };
     
     struct Routes{
+        string airline;
         string airline_ID;//corresponding to the ID in Airlines
         string source_IATA;// example ORD
         int source_ID;//corresponding to ID in Airports
@@ -33,5 +35,3 @@ class Database{
         int destination_ID;//corresponding to ID in Airports
     };
 };
-#pragma once
-#endif

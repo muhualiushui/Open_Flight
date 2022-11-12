@@ -1,6 +1,8 @@
 #include <fstream>
 #include "Transform.h"
 
+using namespace std;
+
 //////helper///////
 vector<std::string> Transform::Split(string str,char determine) {
   size_t last = 0;
@@ -24,6 +26,7 @@ vector<std::string> Transform::Split(string str,char determine) {
 
   return substrs;
 }
+
 bool Transform::isDouble(string deter){
     try{
         stod(deter);
@@ -32,6 +35,7 @@ bool Transform::isDouble(string deter){
     }
     return true;
 }
+
 void Transform::printAirports(int begin,int end){
     int count=0;
      for(auto i : airports_vertices){
@@ -70,12 +74,12 @@ void Transform::printAirlins(int begin,int end){
 }
 //////make 1,1,1,1,1,1, to [1][1][1][1][1]
 
-
 Transform::Transform(string Airports, string Routes, string Airlines){
     InsertRoutes(Routes);
     InsertAirports(Airports);
     InsertAirlines(Airlines);
 }
+
 void Transform::InsertAirports(string filename){
     ifstream AirportsFile(filename);
     string word;
@@ -83,8 +87,8 @@ void Transform::InsertAirports(string filename){
     // int count=0;
     if (AirportsFile.is_open()) {
         while (getline(AirportsFile, word)) {
-            temp=Split(word,',');
-            vector<string> deter={temp[0],temp[1],temp[2],temp[3],temp[4],temp[6],temp[7]};
+            temp = Split(word,',');
+            vector<string> deter = {temp[0],temp[1],temp[2],temp[3],temp[4],temp[6],temp[7]};
             // bool add=true; should not be test because some airports name is not english but still valid construct invalid data after talk
             // for(auto i: deter){
             //     if(isDouble(i)) continue;
@@ -99,18 +103,17 @@ void Transform::InsertAirports(string filename){
             //     }
             // }
             // if(!add) continue;
-            Airports* airport=new Airports();
-            airport->ID=stoi(temp[0]);
-            airport->name=temp[1];
-            airport->city=temp[2];
-            airport->country=temp[3];
-            airport->IATA=temp[4];
-            airport->location=pair<double,double>(stod(temp[6]),stod(temp[7]));
+            Airports* airport = new Airports();
+            airport->ID = stoi(temp[0]);
+            airport->name = temp[1];
+            airport->city = temp[2];
+            airport->country = temp[3];
+            airport->IATA = temp[4];
+            airport->location = pair<double,double>(stod(temp[6]),stod(temp[7]));
             airports_vertices.push_back(airport);
         }   
     }
 }
-
 
 void Transform::InsertAirlines(string filename){
     ifstream AirlinesFile(filename);
@@ -119,7 +122,7 @@ void Transform::InsertAirlines(string filename){
     // int count=0;
     if (AirlinesFile.is_open()) {
         while (getline(AirlinesFile, word)) {
-            temp=Split(word,',');
+            temp = Split(word,',');
             Airlines* airline = new Airlines();
             if (stoi(temp[0]) > 0) {
                 airline->ID = stoi(temp[0]);
@@ -130,6 +133,23 @@ void Transform::InsertAirlines(string filename){
         }   
     }
 }
+
 void Transform::InsertRoutes(string filename){
-    cout<<filename;
+    ifstream RoutesFile(filename);
+    string line;
+    vector<string> temp;
+
+    if (RoutesFile.is_open()) {
+        while (getline(RoutesFile, line)) {
+            temp = Split(line,',');
+            Routes* route = new Routes();
+            route->airline = temp[0];
+            route->airline_ID = temp[1];
+            route->source_IATA = temp[2];
+            route->source_ID = stoi(temp[3]);
+            route->destination_IATA = temp[4];
+            route->destination_ID = stoi(temp[5]);
+            routes.push_back(route);
+        }   
+    }
 }

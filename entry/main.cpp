@@ -1,6 +1,7 @@
-#include "../src/Transform.cpp"
+#include "Database.h"
+#include "Transform.h"
 
-int main(){
+int main() {
     Transform data;
     data.InsertAirports("../Data/airports.dat");
     data.InsertAirlines("../Data/airlines.dat");

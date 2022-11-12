@@ -22,6 +22,7 @@ class Transform : public Database{
     private:
         vector<Airports*> airports_vertices;
         vector<Airlines*> airlines;
+        vector<Routes*> routes;
         // map<int,vector<Routes*>> routes_search;//use ID of airlines to checkout all the routes on this airline 
         // map<pair<int,string>,vector<Airlines*>> airports_search;// use ID of Airports to get all the avaliable airline
 };
