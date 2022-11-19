@@ -1,9 +1,29 @@
 #include <fstream>
 #include "../includes/Transform.hpp"
-
+#include "math.h"
 using namespace std;
-
 //////helper///////
+
+double Transform::distance(double lat1, double long1,
+                    double lat2, double long2){
+    double R = 6371;
+    lat1 = lat1*M_PI/180;
+    long1 = long1*M_PI/180;
+    lat2 = lat2*M_PI/180;
+    long2 = long2*M_PI/180;
+     
+    // Haversine Formula
+    double dlong = long2 - long1;
+    double dlat = lat2 - lat1;
+ 
+    double ans = pow(sin(dlat / 2), 2) +
+                          cos(lat1) * cos(lat2) *
+                          pow(sin(dlong / 2), 2);
+    ans = 2 * asin(sqrt(ans));
+ 
+    return ans * R;
+}
+
 vector<std::string> Transform::Split(string str,char determine) {
   size_t last = 0;
   vector<std::string> substrs;
@@ -23,7 +43,6 @@ vector<std::string> Transform::Split(string str,char determine) {
   }
   std::string substr = str.substr(last, str.length() - last);
   substrs.push_back(substr);
-
   return substrs;
 }
 
@@ -72,6 +91,23 @@ void Transform::printAirlins(int begin,int end){
     }
 
 }
+
+void Transform::printRoutes(int begin,int end){ 
+    int count=0;
+     for(auto i : routes){
+        if(count>=begin){
+            cout<<"route:--------------"<<endl;
+            cout<<"origin:" <<i->source_IATA<<endl;
+            cout<<"end:" <<i->destination_IATA<<endl;
+            cout<<"distance: "<< i->distance<<endl;
+        }
+        if(count==end){
+            break;
+        }
+        count++;
+    }
+}
+
 //////make 1,1,1,1,1,1, to [1][1][1][1][1]
 
 Transform::Transform(string Airports, string Routes, string Airlines){
@@ -138,17 +174,30 @@ void Transform::InsertRoutes(string filename){
     ifstream RoutesFile(filename);
     string line;
     vector<string> temp;
-
     if (RoutesFile.is_open()) {
         while (getline(RoutesFile, line)) {
             temp = Split(line,',');
             Routes* route = new Routes();
             route->airline = temp[0];
-            route->airline_ID = temp[1];
+            route->airline_ID = stoi(temp[1]);
             route->source_IATA = temp[2];
             route->source_ID = stoi(temp[3]);
             route->destination_IATA = temp[4];
             route->destination_ID = stoi(temp[5]);
+            Airports* origin;
+            Airports* end;
+            for(auto i:airports_vertices){
+                if(i->ID==route->source_ID){
+                    origin=i;
+                }
+                if(i->ID==route->destination_ID){
+                    end=i;
+                }
+                if(origin&&end){
+                    route->distance=distance(origin->location.first,origin->location.second,end->location.first,end->location.second);
+                    break;
+                }
+            }
             routes.push_back(route);
         }   
     }

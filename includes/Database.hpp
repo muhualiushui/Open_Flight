@@ -33,5 +33,6 @@ class Database{
         int source_ID;//corresponding to ID in Airports
         string destination_IATA;// example ORD
         int destination_ID;//corresponding to ID in Airports
+        double distance;
     };
 };
