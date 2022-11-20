@@ -17,6 +17,13 @@ class Flight_map: public Transform{
     Flight_map(){};
     Flight_map(string Airports, string Routes, string Airlines);
     void construct_map();
+    // struct Edge{ which you guys prefer? route or a specific Edge
+    //     string origin;
+    //     string destination;
+    //     double distance;
+    // };
+    // Edge would require less storage 
+    Routes* getEdge(int source_id, int des_id);
     /**
      * To implement BFS
      * Dijkstra’s Algorithm
@@ -24,5 +31,5 @@ class Flight_map: public Transform{
      */
     private:
     Transform* all_data;//initial database 
-    map<int,vector<Routes*>> all_routes;//all_route that possible for a given airports can arrive. Implemented but not tested 
+    map<int,map<int,Routes*>> all_routes;// first int corresponding to origin id, second int corresponding to destination 
 };
