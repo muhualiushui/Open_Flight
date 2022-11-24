@@ -1,6 +1,7 @@
 #include <fstream>
 #include "../includes/Transform.hpp"
 #include "math.h"
+
 using namespace std;
 //////helper///////
 
@@ -139,6 +140,19 @@ void Transform::InsertAirports(string filename){
             //     }
             // }
             // if(!add) continue;
+
+            // verify if data with \N
+            bool flag = false;
+            for (auto& d : deter) {
+                if (d == "\\N") {
+                    flag = true;
+                    break;
+                }
+            }
+            if (flag) {
+                continue;
+            }
+
             Airports* airport = new Airports();
             airport->ID = stoi(temp[0]);
             airport->name = temp[1];
@@ -159,8 +173,13 @@ void Transform::InsertAirlines(string filename){
     if (AirlinesFile.is_open()) {
         while (getline(AirlinesFile, word)) {
             temp = Split(word,',');
+
             Airlines* airline = new Airlines();
             if (stoi(temp[0]) > 0) {
+                // verify if data with \N
+                if (temp[0] == "\\N" || temp[1] == "\\N" || temp[7] == "\\N") {
+                    continue;
+                }
                 airline->ID = stoi(temp[0]);
                 airline->name = temp[1];
                 airline->active =  temp[7];
@@ -177,6 +196,19 @@ void Transform::InsertRoutes(string filename){
     if (RoutesFile.is_open()) {
         while (getline(RoutesFile, line)) {
             temp = Split(line,',');
+            
+            // verify if data with \N
+            bool flag = false;
+            for (unsigned int i = 0; i < 6; i++) {
+                if (temp[i] == "\\N") {
+                    flag = true;
+                    break;
+                }
+            }
+            if (flag) {
+                continue;
+            }
+            
             Routes* route = new Routes();
             route->airline = temp[0];
             route->airline_ID = stoi(temp[1]);

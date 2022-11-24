@@ -1,0 +1,2 @@
+/usr/bin/ar qc libsrc.a CMakeFiles/src.dir/Flight_map.cpp.o CMakeFiles/src.dir/Transform.cpp.o
+/usr/bin/ranlib libsrc.a
