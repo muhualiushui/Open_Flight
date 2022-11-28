@@ -16,6 +16,7 @@ class Transform : public Database{
         // vector<Routes*> SearchRoute(int airline_ID){return routes_search[airline_ID];};
         // vector<Airlines*> SearchAirlines(pair<int,string>airports){return airports_search[airports];};
 //helper:
+        pair<double,double> getLocation(int ID);
         double distance(double lat1, double long1,double lat2, double long2);
         vector<std::string> Split(string str,char determine);
         bool isDouble(string deter);
