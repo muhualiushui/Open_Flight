@@ -29,6 +29,7 @@ class Flight_map: public Transform{
      * Dijkstra’s Algorithm
      * PageRank at here
      */
+    vector<int> findPath(int startID, int destinationID);
     private:
     Transform* all_data;//initial database 
     map<int,map<int,Routes*>> all_routes;// first int corresponding to origin id, second int corresponding to destination 
