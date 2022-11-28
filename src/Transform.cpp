@@ -234,3 +234,12 @@ void Transform::InsertRoutes(string filename){
         }   
     }
 }
+
+pair<double,double> Transform::getLocation(int ID) {
+    for (auto airp : airports_vertices) {
+        if (airp->ID == ID) {
+            return airp->location;
+        }
+    }
+    return pair<double,double> ();
+}
