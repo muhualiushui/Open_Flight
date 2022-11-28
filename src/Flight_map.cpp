@@ -26,6 +26,7 @@ Database::Routes* Flight_map::getEdge(int source_id, int des_id){
     return nullptr;
 }
 
+//BFS
 vector<int>  Flight_map::findPath(int startID, int destinationID) {
     vector<int> output;
     //mark all the vertex not visited
