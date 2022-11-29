@@ -159,7 +159,7 @@ void Transform::InsertAirports(string filename){
             airport->city = temp[2];
             airport->country = temp[3];
             airport->IATA = temp[4];
-            airport->location = pair<double,double>(stod(temp[6]),stod(temp[7]));
+//             airport->location = pair<double,double>(stod(temp[6]),stod(temp[7]));
             airports_vertices.push_back(airport);
         }   
     }
