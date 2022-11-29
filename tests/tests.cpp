@@ -15,21 +15,21 @@ TEST_CASE("data") {
 }
 
 TEST_CASE("BFS itself") {
-    Flight_map *map = new Flight_map("../Data/airports.dat", "../Data/routes.dat", "../Data/airlines.dat");
+    Flight_map *map = new Flight_map("../Data/airlines.dat", "../Data/routes.dat", "../Data/airports.dat");
     vector<int> result = map->findPath(3830,3830);
     vector<int> toCompare = {3830};
     REQUIRE(result == toCompare);
 }
 
 TEST_CASE("BFS out of data") {
-    Flight_map *map = new Flight_map("../Data/airports.dat", "../Data/routes.dat", "../Data/airlines.dat");
+    Flight_map *map = new Flight_map("../Data/airlines.dat", "../Data/routes.dat", "../Data/airports.dat");
     vector<int> result = map->findPath(14900,20000);
     vector<int> toCompare;
     REQUIRE(result == toCompare);
 }
 
 TEST_CASE("BFS successfully") {
-    Flight_map *map = new Flight_map("../Data/airports.dat", "../Data/routes.dat", "../Data/airlines.dat");
+    Flight_map *map = new Flight_map("../Data/airlines.dat", "../Data/routes.dat", "../Data/airports.dat");
     vector<int> result = map->findPath(3830,4042);
     vector<int> toCompare;
     ifstream TheText("../tests/BFS_Sucess.txt");

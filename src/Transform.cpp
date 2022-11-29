@@ -1,28 +1,18 @@
 #include <fstream>
 #include "../includes/Transform.hpp"
 #include "math.h"
-
+#include <bits/stdc++.h>
+#define pi 3.14159265358979323846
 using namespace std;
 //////helper///////
 
 double Transform::distance(double lat1, double long1,
                     double lat2, double long2){
-    double R = 6371;
-    lat1 = lat1*M_PI/180;
-    long1 = long1*M_PI/180;
-    lat2 = lat2*M_PI/180;
-    long2 = long2*M_PI/180;
-     
-    // Haversine Formula
-    double dlong = long2 - long1;
-    double dlat = lat2 - lat1;
- 
-    double ans = pow(sin(dlat / 2), 2) +
-                          cos(lat1) * cos(lat2) *
-                          pow(sin(dlong / 2), 2);
-    ans = 2 * asin(sqrt(ans));
- 
-    return ans * R;
+    double dist;
+    dist = sin(lat1) * sin(lat2) + cos(lat1) * cos(lat2) * cos(long1 - long2);
+    dist = acos(dist);
+    dist = (6371 * pi * dist) / 180;
+    return dist;
 }
 
 vector<std::string> Transform::Split(string str,char determine) {
@@ -99,7 +89,9 @@ void Transform::printRoutes(int begin,int end){
         if(count>=begin){
             cout<<"route:--------------"<<endl;
             cout<<"origin:" <<i->source_IATA<<endl;
+            cout<<"source ID: "<<i->source_ID<<endl;
             cout<<"end:" <<i->destination_IATA<<endl;
+            cout<<"des ID: "<<i->destination_ID<<endl;
             cout<<"distance: "<< i->distance<<endl;
         }
         if(count==end){
@@ -116,6 +108,20 @@ Transform::Transform(string Airports, string Routes, string Airlines){
     InsertAirports(Airports);
     InsertAirlines(Airlines);
 }
+    // bool add=true; should not be test because some airports name is not english but still valid construct invalid data after talk
+    // for(auto i: deter){
+    //     if(isDouble(i)) continue;
+    //     for(auto j:i){
+    //         if(!isalpha(j)&&j!=' '&&j!='/'&&j!=','){
+    //             add=false;
+    //             break;
+    //         };
+    //     }  
+    //     if(!add){
+    //         break;
+    //     }
+    // }
+    // if(!add) continue;
 
 void Transform::InsertAirports(string filename){
     ifstream AirportsFile(filename);
@@ -126,21 +132,6 @@ void Transform::InsertAirports(string filename){
         while (getline(AirportsFile, word)) {
             temp = Split(word,',');
             vector<string> deter = {temp[0],temp[1],temp[2],temp[3],temp[4],temp[6],temp[7]};
-            // bool add=true; should not be test because some airports name is not english but still valid construct invalid data after talk
-            // for(auto i: deter){
-            //     if(isDouble(i)) continue;
-            //     for(auto j:i){
-            //         if(!isalpha(j)&&j!=' '&&j!='/'&&j!=','){
-            //             add=false;
-            //             break;
-            //         };
-            //     }  
-            //     if(!add){
-            //         break;
-            //     }
-            // }
-            // if(!add) continue;
-
             // verify if data with \N
             bool flag = false;
             for (auto& d : deter) {
@@ -159,7 +150,7 @@ void Transform::InsertAirports(string filename){
             airport->city = temp[2];
             airport->country = temp[3];
             airport->IATA = temp[4];
-//             airport->location = pair<double,double>(stod(temp[6]),stod(temp[7]));
+            airport->location = pair<double,double>(stod(temp[6]),stod(temp[7]));
             airports_vertices.push_back(airport);
         }   
     }
@@ -216,20 +207,26 @@ void Transform::InsertRoutes(string filename){
             route->source_ID = stoi(temp[3]);
             route->destination_IATA = temp[4];
             route->destination_ID = stoi(temp[5]);
-            Airports* origin;
-            Airports* end;
+            double source_lati=0;
+            double source_long=0;
+            double des_lati=0;
+            double des_long=0;
+            bool source=false;
+            bool des=false;
             for(auto i:airports_vertices){
                 if(i->ID==route->source_ID){
-                    origin=i;
+                    source_lati=i->location.first;
+                    source_long=i->location.second;
+                    source=true;
                 }
                 if(i->ID==route->destination_ID){
-                    end=i;
+                    des_lati=i->location.first;
+                    des_long=i->location.second;
+                    des=true;
                 }
-                if(origin&&end){
-                    route->distance=distance(origin->location.first,origin->location.second,end->location.first,end->location.second);
-                    break;
-                }
+                if(source&&des) break;
             }
+            route->distance=distance(source_lati,source_long,des_lati,des_long);
             routes.push_back(route);
         }   
     }

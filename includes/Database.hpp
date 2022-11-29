@@ -28,7 +28,7 @@ class Database{
     
     struct Routes{
         string airline;
-        string airline_ID;//corresponding to the ID in Airlines
+        int airline_ID;//corresponding to the ID in Airlines
         string source_IATA;// example ORD
         int source_ID;//corresponding to ID in Airports
         string destination_IATA;// example ORD
