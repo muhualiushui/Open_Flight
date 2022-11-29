@@ -8,6 +8,7 @@ using namespace std;
 
 double Transform::distance(double lat1, double long1,
                     double lat2, double long2){
+                        
     double dist;
     dist = sin(lat1) * sin(lat2) + cos(lat1) * cos(lat2) * cos(long1 - long2);
     dist = acos(dist);

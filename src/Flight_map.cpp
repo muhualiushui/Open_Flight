@@ -15,7 +15,7 @@ void Flight_map::construct_map(){
 }
 
 Flight_map::Flight_map(string Airports, string Routes, string Airlines){
-    all_data=new Transform(Airlines,Routes,Airlines);
+    all_data=new Transform(Airports,Routes,Airlines);
     construct_map();
 }
 
