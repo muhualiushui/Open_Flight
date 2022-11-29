@@ -51,7 +51,6 @@ vector<int>  Flight_map::findPath(int startID, int destinationID) {
         output.push_back(currID);
         //push all the adjcent of curr to queue and mark visited
         for (auto a : all_routes[currID]) {
-            cout<<a.first<<endl;
             if (visited[(a.first)] == false) {
                 queue.push(a.first);
                 visited[(a.first)] = true;
