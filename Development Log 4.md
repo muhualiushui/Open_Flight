@@ -52,6 +52,6 @@ Overall debugging and testing
 
 ##### Tongrui Yu:
 
-Upgate the BFS to make it a full traversal.
+Update the BFS to make it a full traversal.
 
 ## Optional: Questions for mentor
