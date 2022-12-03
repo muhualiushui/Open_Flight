@@ -18,6 +18,7 @@ class Database{
         string country;
         string IATA;//may be null be careful; example of IATA ORD
         pair<double,double> location;//Latitude,longtitute
+        double cost=0.0;//for future calculation
     };
 
     struct Airlines{//this is support 

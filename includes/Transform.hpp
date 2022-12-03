@@ -12,7 +12,7 @@ class Transform : public Database{
         vector<Airports*> getVertices(){return airports_vertices;};
         vector<Airlines*> getAirlines(){return airlines;};
         vector<Routes*> getRoutes(){return routes;};
-        Airports* searchAirports(int airports_ID);
+        Airports* searchAirports(int airports_ID){return search_vertices[airports_ID];};
         // vector<Routes*> SearchRoute(int airline_ID){return routes_search[airline_ID];};
         // vector<Airlines*> SearchAirlines(pair<int,string>airports){return airports_search[airports];};
 //helper:
@@ -26,6 +26,7 @@ class Transform : public Database{
 //
     private:
         vector<Airports*> airports_vertices;
+        map<int,Airports*> search_vertices;
         vector<Airlines*> airlines;
         vector<Routes*> routes;
 };

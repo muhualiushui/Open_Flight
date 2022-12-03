@@ -105,8 +105,8 @@ void Transform::printRoutes(int begin,int end){
 //////make 1,1,1,1,1,1, to [1][1][1][1][1]
 
 Transform::Transform(string Airports, string Routes, string Airlines){
-    InsertRoutes(Routes);
     InsertAirports(Airports);
+    InsertRoutes(Routes);
     InsertAirlines(Airlines);
 }
     // bool add=true; should not be test because some airports name is not english but still valid construct invalid data after talk
@@ -144,7 +144,6 @@ void Transform::InsertAirports(string filename){
             if (flag) {
                 continue;
             }
-
             Airports* airport = new Airports();
             airport->ID = stoi(temp[0]);
             airport->name = temp[1];
@@ -153,10 +152,10 @@ void Transform::InsertAirports(string filename){
             airport->IATA = temp[4];
             airport->location = pair<double,double>(stod(temp[6]),stod(temp[7]));
             airports_vertices.push_back(airport);
+            search_vertices[airport->ID]=airport;
         }   
     }
 }
-
 void Transform::InsertAirlines(string filename){
     ifstream AirlinesFile(filename);
     string word;

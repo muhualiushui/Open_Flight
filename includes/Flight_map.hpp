@@ -34,6 +34,13 @@ class Flight_map: public Transform{
     
     //BFS
     vector<int> findPath(int startID, int destinationID);
+    //Dijkstra's
+    vector<int> Dijstras(int start,int end);
+    Transform* get_Data(){return all_data;};
+    void Clean(){
+        delete all_data;
+        all_data=nullptr;
+    };
     
     private:
     Transform* all_data;//initial database 

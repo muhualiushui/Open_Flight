@@ -1,6 +1,7 @@
 #include "../includes/Flight_map.hpp"
-
+#include "../includes/heaps.hpp"
 #include <queue>
+#include <stack>
 
 using namespace std;
 
@@ -65,6 +66,44 @@ vector<int>  Flight_map::findPath(int startID, int destinationID) {
     }
 
     return output;
+}
+
+vector<int> Flight_map::Dijstras(int start,int end){
+    if(start==end){
+        return vector<int>();
+    }
+    Heap q;
+    map<int,int> parent;
+    vector<int> answer;
+    for(auto i:all_data->getVertices()){
+        i->cost=999999;
+        parent[i->ID]=-1;
+        q.push(i);
+    }
+    q.change(start,0);
+    for(auto count:all_data->getVertices()){
+        auto v = q.pop();
+        cout<<v->name<<":"<<endl;
+        auto neigbors=all_routes[v->ID];
+        for(auto neigbor:neigbors){//first: ID of destination; second: route which consisted distance
+        double new_cost=neigbor.second->distance+v->cost;
+            if(new_cost<all_data->searchAirports(neigbor.first)->cost){
+                q.change(neigbor.first,new_cost);
+                parent[neigbor.first]=v->ID;
+            }
+        }
+    }
+    int route=end;
+    stack<int> path;
+    while(route!=start){
+        path.push(route);
+        route=parent[route];
+    }
+    while(!path.empty()){
+        answer.push_back(path.top());
+        path.pop();
+    }
+    return answer;
 }
 
 
