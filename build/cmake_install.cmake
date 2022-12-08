@@ -44,6 +44,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
+  include("/workspaces/CS225 Final Project/Open_Flight/build/lib/cmake_install.cmake")
   include("/workspaces/CS225 Final Project/Open_Flight/build/src/cmake_install.cmake")
 
 endif()

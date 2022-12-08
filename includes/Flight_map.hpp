@@ -1,6 +1,7 @@
 #include "Transform.hpp"
 
 #include <vector>
+#include <unordered_map>
 
 /**
  * class purpose:
@@ -26,6 +27,8 @@ class Flight_map: public Transform{
     // };
     // Edge would require less storage 
     Routes* getEdge(int source_id, int des_id);
+
+    map<int,map<int,Routes*>> getAllRoutes();
     /**
      * To implement BFS
      * Dijkstra’s Algorithm
@@ -41,6 +44,13 @@ class Flight_map: public Transform{
         delete all_data;
         all_data=nullptr;
     };
+    
+    // PageRank
+    unordered_map<int, double> PageRank(int max_iter);
+    // PageRank helper
+    double l2_norm(vector<double> const& v);
+    unordered_map<int, double> matrix_multiply(const unordered_map<int, unordered_map<int, double>>& A, const unordered_map<int, double>& x);
+    bool double_compare(double double1, double double2);
     
     private:
     Transform* all_data;//initial database 

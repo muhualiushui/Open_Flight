@@ -179,6 +179,30 @@ Transform.cpp.s:
 	cd "/workspaces/CS225 Final Project/Open_Flight/build" && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/Transform.cpp.s
 .PHONY : Transform.cpp.s
 
+heaps.o: heaps.cpp.o
+.PHONY : heaps.o
+
+# target to build an object file
+heaps.cpp.o:
+	cd "/workspaces/CS225 Final Project/Open_Flight/build" && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/heaps.cpp.o
+.PHONY : heaps.cpp.o
+
+heaps.i: heaps.cpp.i
+.PHONY : heaps.i
+
+# target to preprocess a source file
+heaps.cpp.i:
+	cd "/workspaces/CS225 Final Project/Open_Flight/build" && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/heaps.cpp.i
+.PHONY : heaps.cpp.i
+
+heaps.s: heaps.cpp.s
+.PHONY : heaps.s
+
+# target to generate assembly for a file
+heaps.cpp.s:
+	cd "/workspaces/CS225 Final Project/Open_Flight/build" && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/src.dir/build.make src/CMakeFiles/src.dir/heaps.cpp.s
+.PHONY : heaps.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -194,6 +218,9 @@ help:
 	@echo "... Transform.o"
 	@echo "... Transform.i"
 	@echo "... Transform.s"
+	@echo "... heaps.o"
+	@echo "... heaps.i"
+	@echo "... heaps.s"
 .PHONY : help
 
 

@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/src.dir/Flight_map.cpp.o.d"
   "CMakeFiles/src.dir/Transform.cpp.o"
   "CMakeFiles/src.dir/Transform.cpp.o.d"
+  "CMakeFiles/src.dir/heaps.cpp.o"
+  "CMakeFiles/src.dir/heaps.cpp.o.d"
   "libsrc.a"
   "libsrc.pdb"
 )

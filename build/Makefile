@@ -118,6 +118,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named test
+
+# Build rule for target.
+test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test
+.PHONY : test
+
+# fast build rule for target.
+test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
+.PHONY : test/fast
+
+#=============================================================================
 # Target rules for targets named main
 
 # Build rule for target.
@@ -129,6 +142,32 @@ main: cmake_check_build_system
 main/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
 .PHONY : main/fast
+
+#=============================================================================
+# Target rules for targets named lodepng
+
+# Build rule for target.
+lodepng: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lodepng
+.PHONY : lodepng
+
+# fast build rule for target.
+lodepng/fast:
+	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/lodepng.dir/build.make lib/CMakeFiles/lodepng.dir/build
+.PHONY : lodepng/fast
+
+#=============================================================================
+# Target rules for targets named cs225
+
+# Build rule for target.
+cs225: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cs225
+.PHONY : cs225
+
+# fast build rule for target.
+cs225/fast:
+	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cs225.dir/build.make lib/CMakeFiles/cs225.dir/build
+.PHONY : cs225/fast
 
 #=============================================================================
 # Target rules for targets named src
@@ -167,6 +206,30 @@ entry/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/entry/main.cpp.s
 .PHONY : entry/main.cpp.s
 
+tests/tests.o: tests/tests.cpp.o
+.PHONY : tests/tests.o
+
+# target to build an object file
+tests/tests.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/tests/tests.cpp.o
+.PHONY : tests/tests.cpp.o
+
+tests/tests.i: tests/tests.cpp.i
+.PHONY : tests/tests.i
+
+# target to preprocess a source file
+tests/tests.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/tests/tests.cpp.i
+.PHONY : tests/tests.cpp.i
+
+tests/tests.s: tests/tests.cpp.s
+.PHONY : tests/tests.s
+
+# target to generate assembly for a file
+tests/tests.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/tests/tests.cpp.s
+.PHONY : tests/tests.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -175,11 +238,17 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... cs225"
+	@echo "... lodepng"
 	@echo "... main"
 	@echo "... src"
+	@echo "... test"
 	@echo "... entry/main.o"
 	@echo "... entry/main.i"
 	@echo "... entry/main.s"
+	@echo "... tests/tests.o"
+	@echo "... tests/tests.i"
+	@echo "... tests/tests.s"
 .PHONY : help
 
 
