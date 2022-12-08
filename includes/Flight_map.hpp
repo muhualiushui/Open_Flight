@@ -36,7 +36,9 @@ class Flight_map: public Transform{
      */
     
     //BFS
+    vector<int> BFS(int startID);
     vector<int> findPath(int startID, int destinationID);
+    
     //Dijkstra's
     vector<int> Dijstras(int start,int end);
     Transform* get_Data(){return all_data;};
