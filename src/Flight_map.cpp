@@ -33,6 +33,37 @@ map<int,map<int,Database::Routes*>> Flight_map::getAllRoutes() {
 }
 
 //BFS
+vector<int> Flight_map::BFS(int startID) {
+    if (startID > 14111 || startID < 0) {
+        cout<<"Please enter right ID"<<endl;
+        return vector<int> ();
+    }
+    vector<int> output;
+    //mark all the vertex not visited
+    vector<bool> visited(14111, false);
+    queue<int> queue;
+    queue.push(startID);
+    visited[startID] = true;
+    int currID = startID;
+
+    while (!queue.empty()) {
+        currID = queue.front();
+
+        output.push_back(currID);
+        //push all the adjcent of curr to queue and mark visited
+        for (auto a : all_routes[currID]) {
+            if (visited[(a.first)] == false) {
+                queue.push(a.first);
+                visited[(a.first)] = true;
+            }
+        }
+        queue.pop();
+    }
+
+    return output;
+}
+
+//BFS2
 vector<int>  Flight_map::findPath(int startID, int destinationID) {
     if (startID > 14111 || startID < 0 || destinationID > 14111 || startID < 0) {
         cout<<"Please enter right ID"<<endl;
@@ -43,7 +74,7 @@ vector<int>  Flight_map::findPath(int startID, int destinationID) {
     vector<bool> visited(14111, false);
     queue<int> queue;
     queue.push(startID);
-    visited[(startID)] = true;
+    visited[startID] = true;
     int currID = startID;
 
     while (!queue.empty()) {
