@@ -49,6 +49,7 @@ class Flight_map: public Transform{
     double l2_norm(vector<double> const& v);
     unordered_map<int, double> matrix_multiply(const unordered_map<int, unordered_map<int, double>>& A, const unordered_map<int, double>& x);
     bool double_compare(double double1, double double2);
+    void write_to_file(string filename, const unordered_map<int, double>& airport_rank);
     
     private:
     Transform* all_data;//initial database 
