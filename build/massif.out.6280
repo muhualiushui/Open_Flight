@@ -1,0 +1,1215 @@
+desc: (none)
+cmd: ./main
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=3437920400
+mem_heap_B=2248582
+mem_heap_extra_B=206210
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=8352235172
+mem_heap_B=3440902
+mem_heap_extra_B=276634
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=12115786594
+mem_heap_B=4268623
+mem_heap_extra_B=320113
+mem_stacks_B=0
+heap_tree=detailed
+n8: 4268623 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2429696 0x10DE8B: Transform::InsertRoutes(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:203)
+  n1: 2429696 0x10CE37: Transform::Transform(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:109)
+   n1: 2429696 0x111E13: Flight_map::Flight_map(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (src/Flight_map.cpp:20)
+    n0: 2429696 0x10EB4F: main (entry/main.cpp:12)
+ n1: 971520 0x10D623: Transform::InsertAirports(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:147)
+  n1: 971520 0x10CDB3: Transform::Transform(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:108)
+   n1: 971520 0x111E13: Flight_map::Flight_map(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (src/Flight_map.cpp:20)
+    n0: 971520 0x10EB4F: main (entry/main.cpp:12)
+ n1: 291456 0x10FD13: allocate (new_allocator.h:127)
+  n1: 291456 0x10FD13: allocate (alloc_traits.h:464)
+   n1: 291456 0x10FD13: _M_get_node (stl_tree.h:561)
+    n1: 291456 0x10FD13: _M_create_node<const std::piecewise_construct_t &, std::tuple<const int &>, std::tuple<> > (stl_tree.h:611)
+     n1: 291456 0x10FD13: std::_Rb_tree_iterator<std::pair<int const, Database::Airports*> > std::_Rb_tree<int, std::pair<int const, Database::Airports*>, std::_Select1st<std::pair<int const, Database::Airports*> >, std::less<int>, std::allocator<std::pair<int const, Database::Airports*> > >::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<int const&>, std::tuple<> >(std::_Rb_tree_const_iterator<std::pair<int const, Database::Airports*> >, std::piecewise_construct_t const&, std::tuple<int const&>&&, std::tuple<>&&) (stl_tree.h:2431)
+      n1: 291456 0x10D8D7: operator[] (stl_map.h:501)
+       n1: 291456 0x10D8D7: Transform::InsertAirports(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:155)
+        n1: 291456 0x10CDB3: Transform::Transform(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:108)
+         n1: 291456 0x111E13: Flight_map::Flight_map(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (src/Flight_map.cpp:20)
+          n0: 291456 0x10EB4F: main (entry/main.cpp:12)
+ n1: 262144 0x1115A3: allocate (new_allocator.h:127)
+  n1: 262144 0x1115A3: allocate (alloc_traits.h:464)
+   n1: 262144 0x1115A3: _M_allocate (stl_vector.h:346)
+    n1: 262144 0x1115A3: void std::__cxx1998::vector<Database::Routes*, std::allocator<Database::Routes*> >::_M_realloc_insert<Database::Routes* const&>(__gnu_cxx::__normal_iterator<Database::Routes**, std::__cxx1998::vector<Database::Routes*, std::allocator<Database::Routes*> > >, Database::Routes* const&) (vector.tcc:440)
+     n1: 262144 0x10E18B: push_back (stl_vector.h:1198)
+      n1: 262144 0x10E18B: push_back (vector:488)
+       n1: 262144 0x10E18B: Transform::InsertRoutes(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:230)
+        n1: 262144 0x10CE37: Transform::Transform(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:109)
+         n1: 262144 0x111E13: Flight_map::Flight_map(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (src/Flight_map.cpp:20)
+          n0: 262144 0x10EB4F: main (entry/main.cpp:12)
+ n1: 164751 0x11126F: allocate (new_allocator.h:127)
+  n1: 164751 0x11126F: allocate (alloc_traits.h:464)
+   n1: 164751 0x11126F: _M_create (basic_string.tcc:153)
+    n2: 164751 0x11126F: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (basic_string.tcc:265)
+     n1: 150757 0x10D6F3: assign (basic_string.h:1387)
+      n1: 150757 0x10D6F3: operator= (basic_string.h:681)
+       n1: 150757 0x10D6F3: Transform::InsertAirports(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:149)
+        n1: 150757 0x10CDB3: Transform::Transform(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:108)
+         n1: 150757 0x111E13: Flight_map::Flight_map(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (src/Flight_map.cpp:20)
+          n0: 150757 0x10EB4F: main (entry/main.cpp:12)
+     n0: 13994 in 2 places, all below massif's threshold (1.00%)
+ n1: 72704 0x491EAA7: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x4005623: call_init (dl-init.c:70)
+   n1: 72704 0x4005623: call_init (dl-init.c:26)
+    n1: 72704 0x400572B: _dl_init (dl-init.c:117)
+     n0: 72704 0x4017C87: ??? (in /usr/lib/aarch64-linux-gnu/ld-linux-aarch64.so.1)
+ n1: 65536 0x111363: allocate (new_allocator.h:127)
+  n1: 65536 0x111363: allocate (alloc_traits.h:464)
+   n1: 65536 0x111363: _M_allocate (stl_vector.h:346)
+    n1: 65536 0x111363: void std::__cxx1998::vector<Database::Airports*, std::allocator<Database::Airports*> >::_M_realloc_insert<Database::Airports* const&>(__gnu_cxx::__normal_iterator<Database::Airports**, std::__cxx1998::vector<Database::Airports*, std::allocator<Database::Airports*> > >, Database::Airports* const&) (vector.tcc:440)
+     n1: 65536 0x10D817: push_back (stl_vector.h:1198)
+      n1: 65536 0x10D817: push_back (vector:488)
+       n1: 65536 0x10D817: Transform::InsertAirports(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:154)
+        n1: 65536 0x10CDB3: Transform::Transform(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:108)
+         n1: 65536 0x111E13: Flight_map::Flight_map(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (src/Flight_map.cpp:20)
+          n0: 65536 0x10EB4F: main (entry/main.cpp:12)
+ n0: 10816 in 28 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=4
+#-----------
+time=14752376481
+mem_heap_B=4817223
+mem_heap_extra_B=354409
+mem_stacks_B=0
+heap_tree=detailed
+n8: 4817223 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2978304 0x10DE8B: Transform::InsertRoutes(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:203)
+  n1: 2978304 0x10CE37: Transform::Transform(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:109)
+   n1: 2978304 0x111E13: Flight_map::Flight_map(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (src/Flight_map.cpp:20)
+    n0: 2978304 0x10EB4F: main (entry/main.cpp:12)
+ n1: 971520 0x10D623: Transform::InsertAirports(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:147)
+  n1: 971520 0x10CDB3: Transform::Transform(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:108)
+   n1: 971520 0x111E13: Flight_map::Flight_map(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (src/Flight_map.cpp:20)
+    n0: 971520 0x10EB4F: main (entry/main.cpp:12)
+ n1: 291456 0x10FD13: allocate (new_allocator.h:127)
+  n1: 291456 0x10FD13: allocate (alloc_traits.h:464)
+   n1: 291456 0x10FD13: _M_get_node (stl_tree.h:561)
+    n1: 291456 0x10FD13: _M_create_node<const std::piecewise_construct_t &, std::tuple<const int &>, std::tuple<> > (stl_tree.h:611)
+     n1: 291456 0x10FD13: std::_Rb_tree_iterator<std::pair<int const, Database::Airports*> > std::_Rb_tree<int, std::pair<int const, Database::Airports*>, std::_Select1st<std::pair<int const, Database::Airports*> >, std::less<int>, std::allocator<std::pair<int const, Database::Airports*> > >::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<int const&>, std::tuple<> >(std::_Rb_tree_const_iterator<std::pair<int const, Database::Airports*> >, std::piecewise_construct_t const&, std::tuple<int const&>&&, std::tuple<>&&) (stl_tree.h:2431)
+      n1: 291456 0x10D8D7: operator[] (stl_map.h:501)
+       n1: 291456 0x10D8D7: Transform::InsertAirports(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:155)
+        n1: 291456 0x10CDB3: Transform::Transform(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:108)
+         n1: 291456 0x111E13: Flight_map::Flight_map(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (src/Flight_map.cpp:20)
+          n0: 291456 0x10EB4F: main (entry/main.cpp:12)
+ n1: 262144 0x1115A3: allocate (new_allocator.h:127)
+  n1: 262144 0x1115A3: allocate (alloc_traits.h:464)
+   n1: 262144 0x1115A3: _M_allocate (stl_vector.h:346)
+    n1: 262144 0x1115A3: void std::__cxx1998::vector<Database::Routes*, std::allocator<Database::Routes*> >::_M_realloc_insert<Database::Routes* const&>(__gnu_cxx::__normal_iterator<Database::Routes**, std::__cxx1998::vector<Database::Routes*, std::allocator<Database::Routes*> > >, Database::Routes* const&) (vector.tcc:440)
+     n1: 262144 0x10E18B: push_back (stl_vector.h:1198)
+      n1: 262144 0x10E18B: push_back (vector:488)
+       n1: 262144 0x10E18B: Transform::InsertRoutes(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:230)
+        n1: 262144 0x10CE37: Transform::Transform(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:109)
+         n1: 262144 0x111E13: Flight_map::Flight_map(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (src/Flight_map.cpp:20)
+          n0: 262144 0x10EB4F: main (entry/main.cpp:12)
+ n1: 164751 0x11126F: allocate (new_allocator.h:127)
+  n1: 164751 0x11126F: allocate (alloc_traits.h:464)
+   n1: 164751 0x11126F: _M_create (basic_string.tcc:153)
+    n2: 164751 0x11126F: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (basic_string.tcc:265)
+     n1: 150757 0x10D6F3: assign (basic_string.h:1387)
+      n1: 150757 0x10D6F3: operator= (basic_string.h:681)
+       n1: 150757 0x10D6F3: Transform::InsertAirports(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:149)
+        n1: 150757 0x10CDB3: Transform::Transform(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:108)
+         n1: 150757 0x111E13: Flight_map::Flight_map(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (src/Flight_map.cpp:20)
+          n0: 150757 0x10EB4F: main (entry/main.cpp:12)
+     n0: 13994 in 2 places, all below massif's threshold (1.00%)
+ n1: 72704 0x491EAA7: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x4005623: call_init (dl-init.c:70)
+   n1: 72704 0x4005623: call_init (dl-init.c:26)
+    n1: 72704 0x400572B: _dl_init (dl-init.c:117)
+     n0: 72704 0x4017C87: ??? (in /usr/lib/aarch64-linux-gnu/ld-linux-aarch64.so.1)
+ n1: 65536 0x111363: allocate (new_allocator.h:127)
+  n1: 65536 0x111363: allocate (alloc_traits.h:464)
+   n1: 65536 0x111363: _M_allocate (stl_vector.h:346)
+    n1: 65536 0x111363: void std::__cxx1998::vector<Database::Airports*, std::allocator<Database::Airports*> >::_M_realloc_insert<Database::Airports* const&>(__gnu_cxx::__normal_iterator<Database::Airports**, std::__cxx1998::vector<Database::Airports*, std::allocator<Database::Airports*> > >, Database::Airports* const&) (vector.tcc:440)
+     n1: 65536 0x10D817: push_back (stl_vector.h:1198)
+      n1: 65536 0x10D817: push_back (vector:488)
+       n1: 65536 0x10D817: Transform::InsertAirports(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:154)
+        n1: 65536 0x10CDB3: Transform::Transform(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:108)
+         n1: 65536 0x111E13: Flight_map::Flight_map(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (src/Flight_map.cpp:20)
+          n0: 65536 0x10EB4F: main (entry/main.cpp:12)
+ n0: 10808 in 28 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=5
+#-----------
+time=18540711788
+mem_heap_B=5658310
+mem_heap_extra_B=406978
+mem_stacks_B=0
+heap_tree=detailed
+n8: 5658310 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 3819392 0x10DE8B: Transform::InsertRoutes(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:203)
+  n1: 3819392 0x10CE37: Transform::Transform(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:109)
+   n1: 3819392 0x111E13: Flight_map::Flight_map(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (src/Flight_map.cpp:20)
+    n0: 3819392 0x10EB4F: main (entry/main.cpp:12)
+ n1: 971520 0x10D623: Transform::InsertAirports(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:147)
+  n1: 971520 0x10CDB3: Transform::Transform(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:108)
+   n1: 971520 0x111E13: Flight_map::Flight_map(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (src/Flight_map.cpp:20)
+    n0: 971520 0x10EB4F: main (entry/main.cpp:12)
+ n1: 291456 0x10FD13: allocate (new_allocator.h:127)
+  n1: 291456 0x10FD13: allocate (alloc_traits.h:464)
+   n1: 291456 0x10FD13: _M_get_node (stl_tree.h:561)
+    n1: 291456 0x10FD13: _M_create_node<const std::piecewise_construct_t &, std::tuple<const int &>, std::tuple<> > (stl_tree.h:611)
+     n1: 291456 0x10FD13: std::_Rb_tree_iterator<std::pair<int const, Database::Airports*> > std::_Rb_tree<int, std::pair<int const, Database::Airports*>, std::_Select1st<std::pair<int const, Database::Airports*> >, std::less<int>, std::allocator<std::pair<int const, Database::Airports*> > >::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<int const&>, std::tuple<> >(std::_Rb_tree_const_iterator<std::pair<int const, Database::Airports*> >, std::piecewise_construct_t const&, std::tuple<int const&>&&, std::tuple<>&&) (stl_tree.h:2431)
+      n1: 291456 0x10D8D7: operator[] (stl_map.h:501)
+       n1: 291456 0x10D8D7: Transform::InsertAirports(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:155)
+        n1: 291456 0x10CDB3: Transform::Transform(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:108)
+         n1: 291456 0x111E13: Flight_map::Flight_map(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (src/Flight_map.cpp:20)
+          n0: 291456 0x10EB4F: main (entry/main.cpp:12)
+ n1: 262144 0x1115A3: allocate (new_allocator.h:127)
+  n1: 262144 0x1115A3: allocate (alloc_traits.h:464)
+   n1: 262144 0x1115A3: _M_allocate (stl_vector.h:346)
+    n1: 262144 0x1115A3: void std::__cxx1998::vector<Database::Routes*, std::allocator<Database::Routes*> >::_M_realloc_insert<Database::Routes* const&>(__gnu_cxx::__normal_iterator<Database::Routes**, std::__cxx1998::vector<Database::Routes*, std::allocator<Database::Routes*> > >, Database::Routes* const&) (vector.tcc:440)
+     n1: 262144 0x10E18B: push_back (stl_vector.h:1198)
+      n1: 262144 0x10E18B: push_back (vector:488)
+       n1: 262144 0x10E18B: Transform::InsertRoutes(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:230)
+        n1: 262144 0x10CE37: Transform::Transform(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:109)
+         n1: 262144 0x111E13: Flight_map::Flight_map(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (src/Flight_map.cpp:20)
+          n0: 262144 0x10EB4F: main (entry/main.cpp:12)
+ n1: 164751 0x11126F: allocate (new_allocator.h:127)
+  n1: 164751 0x11126F: allocate (alloc_traits.h:464)
+   n1: 164751 0x11126F: _M_create (basic_string.tcc:153)
+    n2: 164751 0x11126F: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (basic_string.tcc:265)
+     n1: 150757 0x10D6F3: assign (basic_string.h:1387)
+      n1: 150757 0x10D6F3: operator= (basic_string.h:681)
+       n1: 150757 0x10D6F3: Transform::InsertAirports(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:149)
+        n1: 150757 0x10CDB3: Transform::Transform(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:108)
+         n1: 150757 0x111E13: Flight_map::Flight_map(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (src/Flight_map.cpp:20)
+          n0: 150757 0x10EB4F: main (entry/main.cpp:12)
+     n0: 13994 in 2 places, all below massif's threshold (1.00%)
+ n1: 72704 0x491EAA7: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x4005623: call_init (dl-init.c:70)
+   n1: 72704 0x4005623: call_init (dl-init.c:26)
+    n1: 72704 0x400572B: _dl_init (dl-init.c:117)
+     n0: 72704 0x4017C87: ??? (in /usr/lib/aarch64-linux-gnu/ld-linux-aarch64.so.1)
+ n1: 65536 0x111363: allocate (new_allocator.h:127)
+  n1: 65536 0x111363: allocate (alloc_traits.h:464)
+   n1: 65536 0x111363: _M_allocate (stl_vector.h:346)
+    n1: 65536 0x111363: void std::__cxx1998::vector<Database::Airports*, std::allocator<Database::Airports*> >::_M_realloc_insert<Database::Airports* const&>(__gnu_cxx::__normal_iterator<Database::Airports**, std::__cxx1998::vector<Database::Airports*, std::allocator<Database::Airports*> > >, Database::Airports* const&) (vector.tcc:440)
+     n1: 65536 0x10D817: push_back (stl_vector.h:1198)
+      n1: 65536 0x10D817: push_back (vector:488)
+       n1: 65536 0x10D817: Transform::InsertAirports(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:154)
+        n1: 65536 0x10CDB3: Transform::Transform(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:108)
+         n1: 65536 0x111E13: Flight_map::Flight_map(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (src/Flight_map.cpp:20)
+          n0: 65536 0x10EB4F: main (entry/main.cpp:12)
+ n0: 10807 in 28 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=6
+#-----------
+time=22348752349
+mem_heap_B=6673606
+mem_heap_extra_B=454066
+mem_stacks_B=0
+heap_tree=detailed
+n7: 6673606 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 4572544 0x10DE8B: Transform::InsertRoutes(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:203)
+  n1: 4572544 0x10CE37: Transform::Transform(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:109)
+   n1: 4572544 0x111E13: Flight_map::Flight_map(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (src/Flight_map.cpp:20)
+    n0: 4572544 0x10EB4F: main (entry/main.cpp:12)
+ n1: 971520 0x10D623: Transform::InsertAirports(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:147)
+  n1: 971520 0x10CDB3: Transform::Transform(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:108)
+   n1: 971520 0x111E13: Flight_map::Flight_map(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (src/Flight_map.cpp:20)
+    n0: 971520 0x10EB4F: main (entry/main.cpp:12)
+ n1: 524288 0x1115A3: allocate (new_allocator.h:127)
+  n1: 524288 0x1115A3: allocate (alloc_traits.h:464)
+   n1: 524288 0x1115A3: _M_allocate (stl_vector.h:346)
+    n1: 524288 0x1115A3: void std::__cxx1998::vector<Database::Routes*, std::allocator<Database::Routes*> >::_M_realloc_insert<Database::Routes* const&>(__gnu_cxx::__normal_iterator<Database::Routes**, std::__cxx1998::vector<Database::Routes*, std::allocator<Database::Routes*> > >, Database::Routes* const&) (vector.tcc:440)
+     n1: 524288 0x10E18B: push_back (stl_vector.h:1198)
+      n1: 524288 0x10E18B: push_back (vector:488)
+       n1: 524288 0x10E18B: Transform::InsertRoutes(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:230)
+        n1: 524288 0x10CE37: Transform::Transform(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:109)
+         n1: 524288 0x111E13: Flight_map::Flight_map(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (src/Flight_map.cpp:20)
+          n0: 524288 0x10EB4F: main (entry/main.cpp:12)
+ n1: 291456 0x10FD13: allocate (new_allocator.h:127)
+  n1: 291456 0x10FD13: allocate (alloc_traits.h:464)
+   n1: 291456 0x10FD13: _M_get_node (stl_tree.h:561)
+    n1: 291456 0x10FD13: _M_create_node<const std::piecewise_construct_t &, std::tuple<const int &>, std::tuple<> > (stl_tree.h:611)
+     n1: 291456 0x10FD13: std::_Rb_tree_iterator<std::pair<int const, Database::Airports*> > std::_Rb_tree<int, std::pair<int const, Database::Airports*>, std::_Select1st<std::pair<int const, Database::Airports*> >, std::less<int>, std::allocator<std::pair<int const, Database::Airports*> > >::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<int const&>, std::tuple<> >(std::_Rb_tree_const_iterator<std::pair<int const, Database::Airports*> >, std::piecewise_construct_t const&, std::tuple<int const&>&&, std::tuple<>&&) (stl_tree.h:2431)
+      n1: 291456 0x10D8D7: operator[] (stl_map.h:501)
+       n1: 291456 0x10D8D7: Transform::InsertAirports(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:155)
+        n1: 291456 0x10CDB3: Transform::Transform(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:108)
+         n1: 291456 0x111E13: Flight_map::Flight_map(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (src/Flight_map.cpp:20)
+          n0: 291456 0x10EB4F: main (entry/main.cpp:12)
+ n1: 164751 0x11126F: allocate (new_allocator.h:127)
+  n1: 164751 0x11126F: allocate (alloc_traits.h:464)
+   n1: 164751 0x11126F: _M_create (basic_string.tcc:153)
+    n2: 164751 0x11126F: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (basic_string.tcc:265)
+     n1: 150757 0x10D6F3: assign (basic_string.h:1387)
+      n1: 150757 0x10D6F3: operator= (basic_string.h:681)
+       n1: 150757 0x10D6F3: Transform::InsertAirports(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:149)
+        n1: 150757 0x10CDB3: Transform::Transform(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:108)
+         n1: 150757 0x111E13: Flight_map::Flight_map(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (src/Flight_map.cpp:20)
+          n0: 150757 0x10EB4F: main (entry/main.cpp:12)
+     n0: 13994 in 2 places, all below massif's threshold (1.00%)
+ n0: 76343 in 29 places, all below massif's threshold (1.00%)
+ n1: 72704 0x491EAA7: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x4005623: call_init (dl-init.c:70)
+   n1: 72704 0x4005623: call_init (dl-init.c:26)
+    n1: 72704 0x400572B: _dl_init (dl-init.c:117)
+     n0: 72704 0x4017C87: ??? (in /usr/lib/aarch64-linux-gnu/ld-linux-aarch64.so.1)
+#-----------
+snapshot=7
+#-----------
+time=24680032329
+mem_heap_B=7229900
+mem_heap_extra_B=488828
+mem_stacks_B=0
+heap_tree=detailed
+n6: 7229900 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 5128832 0x10DE8B: Transform::InsertRoutes(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:203)
+  n1: 5128832 0x10CE37: Transform::Transform(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:109)
+   n1: 5128832 0x111E13: Flight_map::Flight_map(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (src/Flight_map.cpp:20)
+    n0: 5128832 0x10EB4F: main (entry/main.cpp:12)
+ n1: 971520 0x10D623: Transform::InsertAirports(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:147)
+  n1: 971520 0x10CDB3: Transform::Transform(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:108)
+   n1: 971520 0x111E13: Flight_map::Flight_map(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (src/Flight_map.cpp:20)
+    n0: 971520 0x10EB4F: main (entry/main.cpp:12)
+ n1: 524288 0x1115A3: allocate (new_allocator.h:127)
+  n1: 524288 0x1115A3: allocate (alloc_traits.h:464)
+   n1: 524288 0x1115A3: _M_allocate (stl_vector.h:346)
+    n1: 524288 0x1115A3: void std::__cxx1998::vector<Database::Routes*, std::allocator<Database::Routes*> >::_M_realloc_insert<Database::Routes* const&>(__gnu_cxx::__normal_iterator<Database::Routes**, std::__cxx1998::vector<Database::Routes*, std::allocator<Database::Routes*> > >, Database::Routes* const&) (vector.tcc:440)
+     n1: 524288 0x10E18B: push_back (stl_vector.h:1198)
+      n1: 524288 0x10E18B: push_back (vector:488)
+       n1: 524288 0x10E18B: Transform::InsertRoutes(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:230)
+        n1: 524288 0x10CE37: Transform::Transform(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:109)
+         n1: 524288 0x111E13: Flight_map::Flight_map(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (src/Flight_map.cpp:20)
+          n0: 524288 0x10EB4F: main (entry/main.cpp:12)
+ n1: 291456 0x10FD13: allocate (new_allocator.h:127)
+  n1: 291456 0x10FD13: allocate (alloc_traits.h:464)
+   n1: 291456 0x10FD13: _M_get_node (stl_tree.h:561)
+    n1: 291456 0x10FD13: _M_create_node<const std::piecewise_construct_t &, std::tuple<const int &>, std::tuple<> > (stl_tree.h:611)
+     n1: 291456 0x10FD13: std::_Rb_tree_iterator<std::pair<int const, Database::Airports*> > std::_Rb_tree<int, std::pair<int const, Database::Airports*>, std::_Select1st<std::pair<int const, Database::Airports*> >, std::less<int>, std::allocator<std::pair<int const, Database::Airports*> > >::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<int const&>, std::tuple<> >(std::_Rb_tree_const_iterator<std::pair<int const, Database::Airports*> >, std::piecewise_construct_t const&, std::tuple<int const&>&&, std::tuple<>&&) (stl_tree.h:2431)
+      n1: 291456 0x10D8D7: operator[] (stl_map.h:501)
+       n1: 291456 0x10D8D7: Transform::InsertAirports(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:155)
+        n1: 291456 0x10CDB3: Transform::Transform(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:108)
+         n1: 291456 0x111E13: Flight_map::Flight_map(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (src/Flight_map.cpp:20)
+          n0: 291456 0x10EB4F: main (entry/main.cpp:12)
+ n1: 164751 0x11126F: allocate (new_allocator.h:127)
+  n1: 164751 0x11126F: allocate (alloc_traits.h:464)
+   n1: 164751 0x11126F: _M_create (basic_string.tcc:153)
+    n2: 164751 0x11126F: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (basic_string.tcc:265)
+     n1: 150757 0x10D6F3: assign (basic_string.h:1387)
+      n1: 150757 0x10D6F3: operator= (basic_string.h:681)
+       n1: 150757 0x10D6F3: Transform::InsertAirports(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:149)
+        n1: 150757 0x10CDB3: Transform::Transform(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:108)
+         n1: 150757 0x111E13: Flight_map::Flight_map(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (src/Flight_map.cpp:20)
+          n0: 150757 0x10EB4F: main (entry/main.cpp:12)
+     n0: 13994 in 2 places, all below massif's threshold (1.00%)
+ n0: 149053 in 30 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=8
+#-----------
+time=28461815250
+mem_heap_B=7910983
+mem_heap_extra_B=531401
+mem_stacks_B=0
+heap_tree=detailed
+n6: 7910983 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 5809920 0x10DE8B: Transform::InsertRoutes(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:203)
+  n1: 5809920 0x10CE37: Transform::Transform(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:109)
+   n1: 5809920 0x111E13: Flight_map::Flight_map(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (src/Flight_map.cpp:20)
+    n0: 5809920 0x10EB4F: main (entry/main.cpp:12)
+ n1: 971520 0x10D623: Transform::InsertAirports(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:147)
+  n1: 971520 0x10CDB3: Transform::Transform(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:108)
+   n1: 971520 0x111E13: Flight_map::Flight_map(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (src/Flight_map.cpp:20)
+    n0: 971520 0x10EB4F: main (entry/main.cpp:12)
+ n1: 524288 0x1115A3: allocate (new_allocator.h:127)
+  n1: 524288 0x1115A3: allocate (alloc_traits.h:464)
+   n1: 524288 0x1115A3: _M_allocate (stl_vector.h:346)
+    n1: 524288 0x1115A3: void std::__cxx1998::vector<Database::Routes*, std::allocator<Database::Routes*> >::_M_realloc_insert<Database::Routes* const&>(__gnu_cxx::__normal_iterator<Database::Routes**, std::__cxx1998::vector<Database::Routes*, std::allocator<Database::Routes*> > >, Database::Routes* const&) (vector.tcc:440)
+     n1: 524288 0x10E18B: push_back (stl_vector.h:1198)
+      n1: 524288 0x10E18B: push_back (vector:488)
+       n1: 524288 0x10E18B: Transform::InsertRoutes(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:230)
+        n1: 524288 0x10CE37: Transform::Transform(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:109)
+         n1: 524288 0x111E13: Flight_map::Flight_map(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (src/Flight_map.cpp:20)
+          n0: 524288 0x10EB4F: main (entry/main.cpp:12)
+ n1: 291456 0x10FD13: allocate (new_allocator.h:127)
+  n1: 291456 0x10FD13: allocate (alloc_traits.h:464)
+   n1: 291456 0x10FD13: _M_get_node (stl_tree.h:561)
+    n1: 291456 0x10FD13: _M_create_node<const std::piecewise_construct_t &, std::tuple<const int &>, std::tuple<> > (stl_tree.h:611)
+     n1: 291456 0x10FD13: std::_Rb_tree_iterator<std::pair<int const, Database::Airports*> > std::_Rb_tree<int, std::pair<int const, Database::Airports*>, std::_Select1st<std::pair<int const, Database::Airports*> >, std::less<int>, std::allocator<std::pair<int const, Database::Airports*> > >::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<int const&>, std::tuple<> >(std::_Rb_tree_const_iterator<std::pair<int const, Database::Airports*> >, std::piecewise_construct_t const&, std::tuple<int const&>&&, std::tuple<>&&) (stl_tree.h:2431)
+      n1: 291456 0x10D8D7: operator[] (stl_map.h:501)
+       n1: 291456 0x10D8D7: Transform::InsertAirports(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:155)
+        n1: 291456 0x10CDB3: Transform::Transform(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:108)
+         n1: 291456 0x111E13: Flight_map::Flight_map(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (src/Flight_map.cpp:20)
+          n0: 291456 0x10EB4F: main (entry/main.cpp:12)
+ n1: 164751 0x11126F: allocate (new_allocator.h:127)
+  n1: 164751 0x11126F: allocate (alloc_traits.h:464)
+   n1: 164751 0x11126F: _M_create (basic_string.tcc:153)
+    n2: 164751 0x11126F: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (basic_string.tcc:265)
+     n1: 150757 0x10D6F3: assign (basic_string.h:1387)
+      n1: 150757 0x10D6F3: operator= (basic_string.h:681)
+       n1: 150757 0x10D6F3: Transform::InsertAirports(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:149)
+        n1: 150757 0x10CDB3: Transform::Transform(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:108)
+         n1: 150757 0x111E13: Flight_map::Flight_map(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (src/Flight_map.cpp:20)
+          n0: 150757 0x10EB4F: main (entry/main.cpp:12)
+     n0: 13994 in 2 places, all below massif's threshold (1.00%)
+ n0: 149048 in 30 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=9
+#-----------
+time=30592888506
+mem_heap_B=8292935
+mem_heap_extra_B=555305
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=33478500560
+mem_heap_B=8994506
+mem_heap_extra_B=599150
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=36263316005
+mem_heap_B=9548231
+mem_heap_extra_B=633761
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=40158467926
+mem_heap_B=10361542
+mem_heap_extra_B=684562
+mem_stacks_B=0
+heap_tree=detailed
+n6: 10361542 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 8260480 0x10DE8B: Transform::InsertRoutes(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:203)
+  n1: 8260480 0x10CE37: Transform::Transform(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:109)
+   n1: 8260480 0x111E13: Flight_map::Flight_map(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (src/Flight_map.cpp:20)
+    n0: 8260480 0x10EB4F: main (entry/main.cpp:12)
+ n1: 971520 0x10D623: Transform::InsertAirports(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:147)
+  n1: 971520 0x10CDB3: Transform::Transform(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:108)
+   n1: 971520 0x111E13: Flight_map::Flight_map(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (src/Flight_map.cpp:20)
+    n0: 971520 0x10EB4F: main (entry/main.cpp:12)
+ n1: 524288 0x1115A3: allocate (new_allocator.h:127)
+  n1: 524288 0x1115A3: allocate (alloc_traits.h:464)
+   n1: 524288 0x1115A3: _M_allocate (stl_vector.h:346)
+    n1: 524288 0x1115A3: void std::__cxx1998::vector<Database::Routes*, std::allocator<Database::Routes*> >::_M_realloc_insert<Database::Routes* const&>(__gnu_cxx::__normal_iterator<Database::Routes**, std::__cxx1998::vector<Database::Routes*, std::allocator<Database::Routes*> > >, Database::Routes* const&) (vector.tcc:440)
+     n1: 524288 0x10E18B: push_back (stl_vector.h:1198)
+      n1: 524288 0x10E18B: push_back (vector:488)
+       n1: 524288 0x10E18B: Transform::InsertRoutes(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:230)
+        n1: 524288 0x10CE37: Transform::Transform(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:109)
+         n1: 524288 0x111E13: Flight_map::Flight_map(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (src/Flight_map.cpp:20)
+          n0: 524288 0x10EB4F: main (entry/main.cpp:12)
+ n1: 291456 0x10FD13: allocate (new_allocator.h:127)
+  n1: 291456 0x10FD13: allocate (alloc_traits.h:464)
+   n1: 291456 0x10FD13: _M_get_node (stl_tree.h:561)
+    n1: 291456 0x10FD13: _M_create_node<const std::piecewise_construct_t &, std::tuple<const int &>, std::tuple<> > (stl_tree.h:611)
+     n1: 291456 0x10FD13: std::_Rb_tree_iterator<std::pair<int const, Database::Airports*> > std::_Rb_tree<int, std::pair<int const, Database::Airports*>, std::_Select1st<std::pair<int const, Database::Airports*> >, std::less<int>, std::allocator<std::pair<int const, Database::Airports*> > >::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<int const&>, std::tuple<> >(std::_Rb_tree_const_iterator<std::pair<int const, Database::Airports*> >, std::piecewise_construct_t const&, std::tuple<int const&>&&, std::tuple<>&&) (stl_tree.h:2431)
+      n1: 291456 0x10D8D7: operator[] (stl_map.h:501)
+       n1: 291456 0x10D8D7: Transform::InsertAirports(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:155)
+        n1: 291456 0x10CDB3: Transform::Transform(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:108)
+         n1: 291456 0x111E13: Flight_map::Flight_map(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (src/Flight_map.cpp:20)
+          n0: 291456 0x10EB4F: main (entry/main.cpp:12)
+ n1: 164751 0x11126F: allocate (new_allocator.h:127)
+  n1: 164751 0x11126F: allocate (alloc_traits.h:464)
+   n1: 164751 0x11126F: _M_create (basic_string.tcc:153)
+    n2: 164751 0x11126F: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (basic_string.tcc:265)
+     n1: 150757 0x10D6F3: assign (basic_string.h:1387)
+      n1: 150757 0x10D6F3: operator= (basic_string.h:681)
+       n1: 150757 0x10D6F3: Transform::InsertAirports(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:149)
+        n1: 150757 0x10CDB3: Transform::Transform(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:108)
+         n1: 150757 0x111E13: Flight_map::Flight_map(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (src/Flight_map.cpp:20)
+          n0: 150757 0x10EB4F: main (entry/main.cpp:12)
+     n0: 13994 in 2 places, all below massif's threshold (1.00%)
+ n0: 149047 in 30 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=13
+#-----------
+time=42921085876
+mem_heap_B=60763781
+mem_heap_extra_B=20164251
+mem_stacks_B=0
+heap_tree=detailed
+n8: 60763781 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 27850776 0x11798F: allocate (new_allocator.h:127)
+  n1: 27850776 0x11798F: allocate (alloc_traits.h:464)
+   n1: 27850776 0x11798F: _M_allocate_node<const std::piecewise_construct_t &, std::tuple<const int &>, std::tuple<> > (hashtable_policy.h:1873)
+    n1: 27850776 0x11798F: _Scoped_node<const std::piecewise_construct_t &, std::tuple<const int &>, std::tuple<> > (hashtable.h:304)
+     n3: 27850776 0x11798F: std::__detail::_Map_base<int, std::pair<int const, double>, std::allocator<std::pair<int const, double> >, std::__detail::_Select1st, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true>, true>::operator[](int const&) (hashtable_policy.h:707)
+      n1: 16533648 0x1135E7: operator[] (unordered_map.h:980)
+       n1: 16533648 0x1135E7: Flight_map::PageRank(double, int) (src/Flight_map.cpp:140)
+        n0: 16533648 0x10EC0F: main (entry/main.cpp:42)
+      n1: 11296032 0x113657: operator[] (unordered_map.h:980)
+       n1: 11296032 0x113657: Flight_map::PageRank(double, int) (src/Flight_map.cpp:133)
+        n0: 11296032 0x10EC0F: main (entry/main.cpp:42)
+      n0: 21096 in 1 place, below massif's threshold (1.00%)
+ n1: 15427960 0x117B0B: allocate (new_allocator.h:127)
+  n1: 15427960 0x117B0B: allocate (alloc_traits.h:464)
+   n1: 15427960 0x117B0B: _M_allocate_buckets (hashtable_policy.h:1927)
+    n1: 15427960 0x117B0B: _M_allocate_buckets (hashtable.h:440)
+     n1: 15427960 0x117B0B: std::_Hashtable<int, std::pair<int const, double>, std::allocator<std::pair<int const, double> >, std::__detail::_Select1st, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true> >::_M_rehash_aux(unsigned long, std::integral_constant<bool, true>) (hashtable.h:2382)
+      n1: 15427960 0x117A2F: _M_rehash (hashtable.h:2361)
+       n1: 15427960 0x117A2F: std::_Hashtable<int, std::pair<int const, double>, std::allocator<std::pair<int const, double> >, std::__detail::_Select1st, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true> >::_M_insert_unique_node(unsigned long, unsigned long, std::__detail::_Hash_node<std::pair<int const, double>, false>*, unsigned long) (hashtable.h:2021)
+        n3: 15427960 0x1179BB: std::__detail::_Map_base<int, std::pair<int const, double>, std::allocator<std::pair<int const, double> >, std::__detail::_Select1st, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true>, true>::operator[](int const&) (hashtable_policy.h:714)
+         n1: 9181976 0x1135E7: operator[] (unordered_map.h:980)
+          n1: 9181976 0x1135E7: Flight_map::PageRank(double, int) (src/Flight_map.cpp:140)
+           n0: 9181976 0x10EC0F: main (entry/main.cpp:42)
+         n1: 6245984 0x113657: operator[] (unordered_map.h:980)
+          n1: 6245984 0x113657: Flight_map::PageRank(double, int) (src/Flight_map.cpp:133)
+           n0: 6245984 0x10EC0F: main (entry/main.cpp:42)
+         n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 8545920 0x10DE8B: Transform::InsertRoutes(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:203)
+  n1: 8545920 0x10CE37: Transform::Transform(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:109)
+   n1: 8545920 0x111E13: Flight_map::Flight_map(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (src/Flight_map.cpp:20)
+    n0: 8545920 0x10EB4F: main (entry/main.cpp:12)
+ n0: 4176117 in 44 places, all below massif's threshold (1.00%)
+ n1: 1773120 0x115FA7: allocate (new_allocator.h:127)
+  n1: 1773120 0x115FA7: allocate (alloc_traits.h:464)
+   n1: 1773120 0x115FA7: _M_get_node (stl_tree.h:561)
+    n1: 1773120 0x115FA7: _M_create_node<const std::piecewise_construct_t &, std::tuple<const int &>, std::tuple<> > (stl_tree.h:611)
+     n1: 1773120 0x115FA7: std::_Rb_tree_iterator<std::pair<int const, Database::Routes*> > std::_Rb_tree<int, std::pair<int const, Database::Routes*>, std::_Select1st<std::pair<int const, Database::Routes*> >, std::less<int>, std::allocator<std::pair<int const, Database::Routes*> > >::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<int const&>, std::tuple<> >(std::_Rb_tree_const_iterator<std::pair<int const, Database::Routes*> >, std::piecewise_construct_t const&, std::tuple<int const&>&&, std::tuple<>&&) (stl_tree.h:2431)
+      n1: 1773120 0x111AC7: operator[] (stl_map.h:501)
+       n1: 1773120 0x111AC7: Flight_map::construct_map() (src/Flight_map.cpp:15)
+        n1: 1773120 0x111E4F: Flight_map::Flight_map(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (src/Flight_map.cpp:21)
+         n0: 1773120 0x10EB4F: main (entry/main.cpp:12)
+ n1: 1048576 0x1115A3: allocate (new_allocator.h:127)
+  n1: 1048576 0x1115A3: allocate (alloc_traits.h:464)
+   n1: 1048576 0x1115A3: _M_allocate (stl_vector.h:346)
+    n1: 1048576 0x1115A3: void std::__cxx1998::vector<Database::Routes*, std::allocator<Database::Routes*> >::_M_realloc_insert<Database::Routes* const&>(__gnu_cxx::__normal_iterator<Database::Routes**, std::__cxx1998::vector<Database::Routes*, std::allocator<Database::Routes*> > >, Database::Routes* const&) (vector.tcc:440)
+     n1: 1048576 0x10E18B: push_back (stl_vector.h:1198)
+      n1: 1048576 0x10E18B: push_back (vector:488)
+       n1: 1048576 0x10E18B: Transform::InsertRoutes(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:230)
+        n1: 1048576 0x10CE37: Transform::Transform(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:109)
+         n1: 1048576 0x111E13: Flight_map::Flight_map(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (src/Flight_map.cpp:20)
+          n0: 1048576 0x10EB4F: main (entry/main.cpp:12)
+ n1: 971520 0x10D623: Transform::InsertAirports(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:147)
+  n1: 971520 0x10CDB3: Transform::Transform(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:108)
+   n1: 971520 0x111E13: Flight_map::Flight_map(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (src/Flight_map.cpp:20)
+    n0: 971520 0x10EB4F: main (entry/main.cpp:12)
+ n1: 969792 0x11563B: allocate (new_allocator.h:127)
+  n1: 969792 0x11563B: allocate (alloc_traits.h:464)
+   n1: 969792 0x11563B: _M_get_node (stl_tree.h:561)
+    n1: 969792 0x11563B: _M_create_node<const std::pair<const int, Database::Routes *> &> (stl_tree.h:611)
+     n1: 969792 0x11563B: operator()<const std::pair<const int, Database::Routes *> &> (stl_tree.h:529)
+      n1: 969792 0x11563B: _M_clone_node<false, std::_Rb_tree<int, std::pair<const int, Database::Routes *>, std::_Select1st<std::pair<const int, Database::Routes *> >, std::less<int>, std::allocator<std::pair<const int, Database::Routes *> > >::_Alloc_node> (stl_tree.h:645)
+       n1: 969792 0x11563B: std::_Rb_tree_node<std::pair<int const, Database::Routes*> >* std::_Rb_tree<int, std::pair<int const, Database::Routes*>, std::_Select1st<std::pair<int const, Database::Routes*> >, std::less<int>, std::allocator<std::pair<int const, Database::Routes*> > >::_M_copy<false, std::_Rb_tree<int, std::pair<int const, Database::Routes*>, std::_Select1st<std::pair<int const, Database::Routes*> >, std::less<int>, std::allocator<std::pair<int const, Database::Routes*> > >::_Alloc_node>(std::_Rb_tree_node<std::pair<int const, Database::Routes*> >*, std::_Rb_tree_node_base*, std::_Rb_tree<int, std::pair<int const, Database::Routes*>, std::_Select1st<std::pair<int const, Database::Routes*> >, std::less<int>, std::allocator<std::pair<int const, Database::Routes*> > >::_Alloc_node&) (stl_tree.h:1849)
+        n0: 969792 in 3 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=14
+#-----------
+time=45537985630
+mem_heap_B=165452277
+mem_heap_extra_B=65138619
+mem_stacks_B=0
+heap_tree=detailed
+n4: 165452277 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 95246592 0x11798F: allocate (new_allocator.h:127)
+  n1: 95246592 0x11798F: allocate (alloc_traits.h:464)
+   n1: 95246592 0x11798F: _M_allocate_node<const std::piecewise_construct_t &, std::tuple<const int &>, std::tuple<> > (hashtable_policy.h:1873)
+    n1: 95246592 0x11798F: _Scoped_node<const std::piecewise_construct_t &, std::tuple<const int &>, std::tuple<> > (hashtable.h:304)
+     n3: 95246592 0x11798F: std::__detail::_Map_base<int, std::pair<int const, double>, std::allocator<std::pair<int const, double> >, std::__detail::_Select1st, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true>, true>::operator[](int const&) (hashtable_policy.h:707)
+      n1: 55131600 0x1135E7: operator[] (unordered_map.h:980)
+       n1: 55131600 0x1135E7: Flight_map::PageRank(double, int) (src/Flight_map.cpp:140)
+        n0: 55131600 0x10EC0F: main (entry/main.cpp:42)
+      n1: 39955488 0x113657: operator[] (unordered_map.h:980)
+       n1: 39955488 0x113657: Flight_map::PageRank(double, int) (src/Flight_map.cpp:133)
+        n0: 39955488 0x10EC0F: main (entry/main.cpp:42)
+      n0: 159504 in 1 place, below massif's threshold (1.00%)
+ n1: 52720640 0x117B0B: allocate (new_allocator.h:127)
+  n1: 52720640 0x117B0B: allocate (alloc_traits.h:464)
+   n1: 52720640 0x117B0B: _M_allocate_buckets (hashtable_policy.h:1927)
+    n1: 52720640 0x117B0B: _M_allocate_buckets (hashtable.h:440)
+     n1: 52720640 0x117B0B: std::_Hashtable<int, std::pair<int const, double>, std::allocator<std::pair<int const, double> >, std::__detail::_Select1st, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true> >::_M_rehash_aux(unsigned long, std::integral_constant<bool, true>) (hashtable.h:2382)
+      n1: 52720640 0x117A2F: _M_rehash (hashtable.h:2361)
+       n1: 52720640 0x117A2F: std::_Hashtable<int, std::pair<int const, double>, std::allocator<std::pair<int const, double> >, std::__detail::_Select1st, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true> >::_M_insert_unique_node(unsigned long, unsigned long, std::__detail::_Hash_node<std::pair<int const, double>, false>*, unsigned long) (hashtable.h:2021)
+        n3: 52720640 0x1179BB: std::__detail::_Map_base<int, std::pair<int const, double>, std::allocator<std::pair<int const, double> >, std::__detail::_Select1st, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true>, true>::operator[](int const&) (hashtable_policy.h:714)
+         n1: 30572448 0x1135E7: operator[] (unordered_map.h:980)
+          n1: 30572448 0x1135E7: Flight_map::PageRank(double, int) (src/Flight_map.cpp:140)
+           n0: 30572448 0x10EC0F: main (entry/main.cpp:42)
+         n1: 22148192 0x113657: operator[] (unordered_map.h:980)
+          n1: 22148192 0x113657: Flight_map::PageRank(double, int) (src/Flight_map.cpp:133)
+           n0: 22148192 0x10EC0F: main (entry/main.cpp:42)
+         n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 8939125 in 48 places, all below massif's threshold (1.00%)
+ n1: 8545920 0x10DE8B: Transform::InsertRoutes(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:203)
+  n1: 8545920 0x10CE37: Transform::Transform(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:109)
+   n1: 8545920 0x111E13: Flight_map::Flight_map(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (src/Flight_map.cpp:20)
+    n0: 8545920 0x10EB4F: main (entry/main.cpp:12)
+#-----------
+snapshot=15
+#-----------
+time=50009529678
+mem_heap_B=338333461
+mem_heap_extra_B=139427963
+mem_stacks_B=0
+heap_tree=detailed
+n4: 338333461 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 206571960 0x11798F: allocate (new_allocator.h:127)
+  n1: 206571960 0x11798F: allocate (alloc_traits.h:464)
+   n1: 206571960 0x11798F: _M_allocate_node<const std::piecewise_construct_t &, std::tuple<const int &>, std::tuple<> > (hashtable_policy.h:1873)
+    n1: 206571960 0x11798F: _Scoped_node<const std::piecewise_construct_t &, std::tuple<const int &>, std::tuple<> > (hashtable.h:304)
+     n3: 206571960 0x11798F: std::__detail::_Map_base<int, std::pair<int const, double>, std::allocator<std::pair<int const, double> >, std::__detail::_Select1st, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true>, true>::operator[](int const&) (hashtable_policy.h:707)
+      n1: 122989032 0x1135E7: operator[] (unordered_map.h:980)
+       n1: 122989032 0x1135E7: Flight_map::PageRank(double, int) (src/Flight_map.cpp:140)
+        n0: 122989032 0x10EC0F: main (entry/main.cpp:42)
+      n1: 83233920 0x113657: operator[] (unordered_map.h:980)
+       n1: 83233920 0x113657: Flight_map::PageRank(double, int) (src/Flight_map.cpp:133)
+        n0: 83233920 0x10EC0F: main (entry/main.cpp:42)
+      n0: 349008 in 1 place, below massif's threshold (1.00%)
+ n1: 114276456 0x117B0B: allocate (new_allocator.h:127)
+  n1: 114276456 0x117B0B: allocate (alloc_traits.h:464)
+   n1: 114276456 0x117B0B: _M_allocate_buckets (hashtable_policy.h:1927)
+    n1: 114276456 0x117B0B: _M_allocate_buckets (hashtable.h:440)
+     n1: 114276456 0x117B0B: std::_Hashtable<int, std::pair<int const, double>, std::allocator<std::pair<int const, double> >, std::__detail::_Select1st, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true> >::_M_rehash_aux(unsigned long, std::integral_constant<bool, true>) (hashtable.h:2382)
+      n1: 114276456 0x117A2F: _M_rehash (hashtable.h:2361)
+       n1: 114276456 0x117A2F: std::_Hashtable<int, std::pair<int const, double>, std::allocator<std::pair<int const, double> >, std::__detail::_Select1st, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true> >::_M_insert_unique_node(unsigned long, unsigned long, std::__detail::_Hash_node<std::pair<int const, double>, false>*, unsigned long) (hashtable.h:2021)
+        n3: 114276456 0x1179BB: std::__detail::_Map_base<int, std::pair<int const, double>, std::allocator<std::pair<int const, double> >, std::__detail::_Select1st, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true>, true>::operator[](int const&) (hashtable_policy.h:714)
+         n1: 68253416 0x1135E7: operator[] (unordered_map.h:980)
+          n1: 68253416 0x1135E7: Flight_map::PageRank(double, int) (src/Flight_map.cpp:140)
+           n0: 68253416 0x10EC0F: main (entry/main.cpp:42)
+         n1: 46023040 0x113657: operator[] (unordered_map.h:980)
+          n1: 46023040 0x113657: Flight_map::PageRank(double, int) (src/Flight_map.cpp:133)
+           n0: 46023040 0x10EC0F: main (entry/main.cpp:42)
+         n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 8939125 in 48 places, all below massif's threshold (1.00%)
+ n1: 8545920 0x10DE8B: Transform::InsertRoutes(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:203)
+  n1: 8545920 0x10CE37: Transform::Transform(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:109)
+   n1: 8545920 0x111E13: Flight_map::Flight_map(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (src/Flight_map.cpp:20)
+    n0: 8545920 0x10EB4F: main (entry/main.cpp:12)
+#-----------
+snapshot=16
+#-----------
+time=54244664891
+mem_heap_B=499083365
+mem_heap_extra_B=208515995
+mem_stacks_B=0
+heap_tree=detailed
+n4: 499083365 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 310102944 0x11798F: allocate (new_allocator.h:127)
+  n1: 310102944 0x11798F: allocate (alloc_traits.h:464)
+   n1: 310102944 0x11798F: _M_allocate_node<const std::piecewise_construct_t &, std::tuple<const int &>, std::tuple<> > (hashtable_policy.h:1873)
+    n1: 310102944 0x11798F: _Scoped_node<const std::piecewise_construct_t &, std::tuple<const int &>, std::tuple<> > (hashtable.h:304)
+     n3: 310102944 0x11798F: std::__detail::_Map_base<int, std::pair<int const, double>, std::allocator<std::pair<int const, double> >, std::__detail::_Select1st, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true>, true>::operator[](int const&) (hashtable_policy.h:707)
+      n1: 189111120 0x1135E7: operator[] (unordered_map.h:980)
+       n1: 189111120 0x1135E7: Flight_map::PageRank(double, int) (src/Flight_map.cpp:140)
+        n0: 189111120 0x10EC0F: main (entry/main.cpp:42)
+      n1: 120540552 0x113657: operator[] (unordered_map.h:980)
+       n1: 120540552 0x113657: Flight_map::PageRank(double, int) (src/Flight_map.cpp:133)
+        n0: 120540552 0x10EC0F: main (entry/main.cpp:42)
+      n0: 451272 in 1 place, below massif's threshold (1.00%)
+ n1: 171495376 0x117B0B: allocate (new_allocator.h:127)
+  n1: 171495376 0x117B0B: allocate (alloc_traits.h:464)
+   n1: 171495376 0x117B0B: _M_allocate_buckets (hashtable_policy.h:1927)
+    n1: 171495376 0x117B0B: _M_allocate_buckets (hashtable.h:440)
+     n1: 171495376 0x117B0B: std::_Hashtable<int, std::pair<int const, double>, std::allocator<std::pair<int const, double> >, std::__detail::_Select1st, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true> >::_M_rehash_aux(unsigned long, std::integral_constant<bool, true>) (hashtable.h:2382)
+      n1: 171495376 0x117A2F: _M_rehash (hashtable.h:2361)
+       n1: 171495376 0x117A2F: std::_Hashtable<int, std::pair<int const, double>, std::allocator<std::pair<int const, double> >, std::__detail::_Select1st, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true> >::_M_insert_unique_node(unsigned long, unsigned long, std::__detail::_Hash_node<std::pair<int const, double>, false>*, unsigned long) (hashtable.h:2021)
+        n3: 171495376 0x1179BB: std::__detail::_Map_base<int, std::pair<int const, double>, std::allocator<std::pair<int const, double> >, std::__detail::_Select1st, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true>, true>::operator[](int const&) (hashtable_policy.h:714)
+         n1: 104844152 0x1135E7: operator[] (unordered_map.h:980)
+          n1: 104844152 0x1135E7: Flight_map::PageRank(double, int) (src/Flight_map.cpp:140)
+           n0: 104844152 0x10EC0F: main (entry/main.cpp:42)
+         n1: 66651224 0x113657: operator[] (unordered_map.h:980)
+          n1: 66651224 0x113657: Flight_map::PageRank(double, int) (src/Flight_map.cpp:133)
+           n0: 66651224 0x10EC0F: main (entry/main.cpp:42)
+         n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 8939125 in 48 places, all below massif's threshold (1.00%)
+ n1: 8545920 0x10DE8B: Transform::InsertRoutes(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:203)
+  n1: 8545920 0x10CE37: Transform::Transform(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (entry/../src/Transform.cpp:109)
+   n1: 8545920 0x111E13: Flight_map::Flight_map(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (src/Flight_map.cpp:20)
+    n0: 8545920 0x10EB4F: main (entry/main.cpp:12)
+#-----------
+snapshot=17
+#-----------
+time=57481730145
+mem_heap_B=614891221
+mem_heap_extra_B=258286747
+mem_stacks_B=0
+heap_tree=detailed
+n3: 614891221 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 384686256 0x11798F: allocate (new_allocator.h:127)
+  n1: 384686256 0x11798F: allocate (alloc_traits.h:464)
+   n1: 384686256 0x11798F: _M_allocate_node<const std::piecewise_construct_t &, std::tuple<const int &>, std::tuple<> > (hashtable_policy.h:1873)
+    n1: 384686256 0x11798F: _Scoped_node<const std::piecewise_construct_t &, std::tuple<const int &>, std::tuple<> > (hashtable.h:304)
+     n3: 384686256 0x11798F: std::__detail::_Map_base<int, std::pair<int const, double>, std::allocator<std::pair<int const, double> >, std::__detail::_Select1st, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true>, true>::operator[](int const&) (hashtable_policy.h:707)
+      n1: 241732848 0x1135E7: operator[] (unordered_map.h:980)
+       n1: 241732848 0x1135E7: Flight_map::PageRank(double, int) (src/Flight_map.cpp:140)
+        n0: 241732848 0x10EC0F: main (entry/main.cpp:42)
+      n1: 142389456 0x113657: operator[] (unordered_map.h:980)
+       n1: 142389456 0x113657: Flight_map::PageRank(double, int) (src/Flight_map.cpp:133)
+        n0: 142389456 0x10EC0F: main (entry/main.cpp:42)
+      n0: 563952 in 1 place, below massif's threshold (1.00%)
+ n1: 212719920 0x117B0B: allocate (new_allocator.h:127)
+  n1: 212719920 0x117B0B: allocate (alloc_traits.h:464)
+   n1: 212719920 0x117B0B: _M_allocate_buckets (hashtable_policy.h:1927)
+    n1: 212719920 0x117B0B: _M_allocate_buckets (hashtable.h:440)
+     n1: 212719920 0x117B0B: std::_Hashtable<int, std::pair<int const, double>, std::allocator<std::pair<int const, double> >, std::__detail::_Select1st, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true> >::_M_rehash_aux(unsigned long, std::integral_constant<bool, true>) (hashtable.h:2382)
+      n1: 212719920 0x117A2F: _M_rehash (hashtable.h:2361)
+       n1: 212719920 0x117A2F: std::_Hashtable<int, std::pair<int const, double>, std::allocator<std::pair<int const, double> >, std::__detail::_Select1st, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true> >::_M_insert_unique_node(unsigned long, unsigned long, std::__detail::_Hash_node<std::pair<int const, double>, false>*, unsigned long) (hashtable.h:2021)
+        n3: 212719920 0x1179BB: std::__detail::_Map_base<int, std::pair<int const, double>, std::allocator<std::pair<int const, double> >, std::__detail::_Select1st, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true>, true>::operator[](int const&) (hashtable_policy.h:714)
+         n1: 133987648 0x1135E7: operator[] (unordered_map.h:980)
+          n1: 133987648 0x1135E7: Flight_map::PageRank(double, int) (src/Flight_map.cpp:140)
+           n0: 133987648 0x10EC0F: main (entry/main.cpp:42)
+         n1: 78732272 0x113657: operator[] (unordered_map.h:980)
+          n1: 78732272 0x113657: Flight_map::PageRank(double, int) (src/Flight_map.cpp:133)
+           n0: 78732272 0x10EC0F: main (entry/main.cpp:42)
+         n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 17485045 in 49 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=18
+#-----------
+time=62227978813
+mem_heap_B=796312597
+mem_heap_extra_B=336245915
+mem_stacks_B=0
+heap_tree=detailed
+n3: 796312597 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 501511008 0x11798F: allocate (new_allocator.h:127)
+  n1: 501511008 0x11798F: allocate (alloc_traits.h:464)
+   n1: 501511008 0x11798F: _M_allocate_node<const std::piecewise_construct_t &, std::tuple<const int &>, std::tuple<> > (hashtable_policy.h:1873)
+    n1: 501511008 0x11798F: _Scoped_node<const std::piecewise_construct_t &, std::tuple<const int &>, std::tuple<> > (hashtable.h:304)
+     n3: 501511008 0x11798F: std::__detail::_Map_base<int, std::pair<int const, double>, std::allocator<std::pair<int const, double> >, std::__detail::_Select1st, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true>, true>::operator[](int const&) (hashtable_policy.h:707)
+      n1: 314773008 0x1135E7: operator[] (unordered_map.h:980)
+       n1: 314773008 0x1135E7: Flight_map::PageRank(double, int) (src/Flight_map.cpp:140)
+        n0: 314773008 0x10EC0F: main (entry/main.cpp:42)
+      n1: 185938632 0x113657: operator[] (unordered_map.h:980)
+       n1: 185938632 0x113657: Flight_map::PageRank(double, int) (src/Flight_map.cpp:133)
+        n0: 185938632 0x10EC0F: main (entry/main.cpp:42)
+      n0: 799368 in 1 place, below massif's threshold (1.00%)
+ n1: 277316544 0x117B0B: allocate (new_allocator.h:127)
+  n1: 277316544 0x117B0B: allocate (alloc_traits.h:464)
+   n1: 277316544 0x117B0B: _M_allocate_buckets (hashtable_policy.h:1927)
+    n1: 277316544 0x117B0B: _M_allocate_buckets (hashtable.h:440)
+     n1: 277316544 0x117B0B: std::_Hashtable<int, std::pair<int const, double>, std::allocator<std::pair<int const, double> >, std::__detail::_Select1st, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true> >::_M_rehash_aux(unsigned long, std::integral_constant<bool, true>) (hashtable.h:2382)
+      n1: 277316544 0x117A2F: _M_rehash (hashtable.h:2361)
+       n1: 277316544 0x117A2F: std::_Hashtable<int, std::pair<int const, double>, std::allocator<std::pair<int const, double> >, std::__detail::_Select1st, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true> >::_M_insert_unique_node(unsigned long, unsigned long, std::__detail::_Hash_node<std::pair<int const, double>, false>*, unsigned long) (hashtable.h:2021)
+        n3: 277316544 0x1179BB: std::__detail::_Map_base<int, std::pair<int const, double>, std::allocator<std::pair<int const, double> >, std::__detail::_Select1st, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true>, true>::operator[](int const&) (hashtable_policy.h:714)
+         n1: 174504360 0x1135E7: operator[] (unordered_map.h:980)
+          n1: 174504360 0x1135E7: Flight_map::PageRank(double, int) (src/Flight_map.cpp:140)
+           n0: 174504360 0x10EC0F: main (entry/main.cpp:42)
+         n1: 102812184 0x113657: operator[] (unordered_map.h:980)
+          n1: 102812184 0x113657: Flight_map::PageRank(double, int) (src/Flight_map.cpp:133)
+           n0: 102812184 0x10EC0F: main (entry/main.cpp:42)
+         n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 17485045 in 49 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=19
+#-----------
+time=65729232940
+mem_heap_B=933607925
+mem_heap_extra_B=395225259
+mem_stacks_B=0
+heap_tree=detailed
+n3: 933607925 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 589893888 0x11798F: allocate (new_allocator.h:127)
+  n1: 589893888 0x11798F: allocate (alloc_traits.h:464)
+   n1: 589893888 0x11798F: _M_allocate_node<const std::piecewise_construct_t &, std::tuple<const int &>, std::tuple<> > (hashtable_policy.h:1873)
+    n1: 589893888 0x11798F: _Scoped_node<const std::piecewise_construct_t &, std::tuple<const int &>, std::tuple<> > (hashtable.h:304)
+     n3: 589893888 0x11798F: std::__detail::_Map_base<int, std::pair<int const, double>, std::allocator<std::pair<int const, double> >, std::__detail::_Select1st, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true>, true>::operator[](int const&) (hashtable_policy.h:707)
+      n1: 368373216 0x1135E7: operator[] (unordered_map.h:980)
+       n1: 368373216 0x1135E7: Flight_map::PageRank(double, int) (src/Flight_map.cpp:140)
+        n0: 368373216 0x10EC0F: main (entry/main.cpp:42)
+      n1: 220692000 0x113657: operator[] (unordered_map.h:980)
+       n1: 220692000 0x113657: Flight_map::PageRank(double, int) (src/Flight_map.cpp:133)
+        n0: 220692000 0x10EC0F: main (entry/main.cpp:42)
+      n0: 828672 in 1 place, below massif's threshold (1.00%)
+ n1: 326228992 0x117B0B: allocate (new_allocator.h:127)
+  n1: 326228992 0x117B0B: allocate (alloc_traits.h:464)
+   n1: 326228992 0x117B0B: _M_allocate_buckets (hashtable_policy.h:1927)
+    n1: 326228992 0x117B0B: _M_allocate_buckets (hashtable.h:440)
+     n1: 326228992 0x117B0B: std::_Hashtable<int, std::pair<int const, double>, std::allocator<std::pair<int const, double> >, std::__detail::_Select1st, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true> >::_M_rehash_aux(unsigned long, std::integral_constant<bool, true>) (hashtable.h:2382)
+      n1: 326228992 0x117A2F: _M_rehash (hashtable.h:2361)
+       n1: 326228992 0x117A2F: std::_Hashtable<int, std::pair<int const, double>, std::allocator<std::pair<int const, double> >, std::__detail::_Select1st, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true> >::_M_insert_unique_node(unsigned long, unsigned long, std::__detail::_Hash_node<std::pair<int const, double>, false>*, unsigned long) (hashtable.h:2021)
+        n3: 326228992 0x1179BB: std::__detail::_Map_base<int, std::pair<int const, double>, std::allocator<std::pair<int const, double> >, std::__detail::_Select1st, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true>, true>::operator[](int const&) (hashtable_policy.h:714)
+         n1: 204145056 0x1135E7: operator[] (unordered_map.h:980)
+          n1: 204145056 0x1135E7: Flight_map::PageRank(double, int) (src/Flight_map.cpp:140)
+           n0: 204145056 0x10EC0F: main (entry/main.cpp:42)
+         n1: 122083936 0x113657: operator[] (unordered_map.h:980)
+          n1: 122083936 0x113657: Flight_map::PageRank(double, int) (src/Flight_map.cpp:133)
+           n0: 122083936 0x10EC0F: main (entry/main.cpp:42)
+         n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 17485045 in 49 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=20
+#-----------
+time=70455799821
+mem_heap_B=1116685205
+mem_heap_extra_B=473914219
+mem_stacks_B=0
+heap_tree=detailed
+n3: 1116685205 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 707812224 0x11798F: allocate (new_allocator.h:127)
+  n1: 707812224 0x11798F: allocate (alloc_traits.h:464)
+   n1: 707812224 0x11798F: _M_allocate_node<const std::piecewise_construct_t &, std::tuple<const int &>, std::tuple<> > (hashtable_policy.h:1873)
+    n1: 707812224 0x11798F: _Scoped_node<const std::piecewise_construct_t &, std::tuple<const int &>, std::tuple<> > (hashtable.h:304)
+     n3: 707812224 0x11798F: std::__detail::_Map_base<int, std::pair<int const, double>, std::allocator<std::pair<int const, double> >, std::__detail::_Select1st, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true>, true>::operator[](int const&) (hashtable_policy.h:707)
+      n1: 441486816 0x1135E7: operator[] (unordered_map.h:980)
+       n1: 441486816 0x1135E7: Flight_map::PageRank(double, int) (src/Flight_map.cpp:140)
+        n0: 441486816 0x10EC0F: main (entry/main.cpp:42)
+      n1: 265456752 0x113657: operator[] (unordered_map.h:980)
+       n1: 265456752 0x113657: Flight_map::PageRank(double, int) (src/Flight_map.cpp:133)
+        n0: 265456752 0x10EC0F: main (entry/main.cpp:42)
+      n0: 868656 in 1 place, below massif's threshold (1.00%)
+ n1: 391387936 0x117B0B: allocate (new_allocator.h:127)
+  n1: 391387936 0x117B0B: allocate (alloc_traits.h:464)
+   n1: 391387936 0x117B0B: _M_allocate_buckets (hashtable_policy.h:1927)
+    n1: 391387936 0x117B0B: _M_allocate_buckets (hashtable.h:440)
+     n1: 391387936 0x117B0B: std::_Hashtable<int, std::pair<int const, double>, std::allocator<std::pair<int const, double> >, std::__detail::_Select1st, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true> >::_M_rehash_aux(unsigned long, std::integral_constant<bool, true>) (hashtable.h:2382)
+      n1: 391387936 0x117A2F: _M_rehash (hashtable.h:2361)
+       n1: 391387936 0x117A2F: std::_Hashtable<int, std::pair<int const, double>, std::allocator<std::pair<int const, double> >, std::__detail::_Select1st, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true> >::_M_insert_unique_node(unsigned long, unsigned long, std::__detail::_Hash_node<std::pair<int const, double>, false>*, unsigned long) (hashtable.h:2021)
+        n3: 391387936 0x1179BB: std::__detail::_Map_base<int, std::pair<int const, double>, std::allocator<std::pair<int const, double> >, std::__detail::_Select1st, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true>, true>::operator[](int const&) (hashtable_policy.h:714)
+         n1: 244607312 0x1135E7: operator[] (unordered_map.h:980)
+          n1: 244607312 0x1135E7: Flight_map::PageRank(double, int) (src/Flight_map.cpp:140)
+           n0: 244607312 0x10EC0F: main (entry/main.cpp:42)
+         n1: 146780624 0x113657: operator[] (unordered_map.h:980)
+          n1: 146780624 0x113657: Flight_map::PageRank(double, int) (src/Flight_map.cpp:133)
+           n0: 146780624 0x10EC0F: main (entry/main.cpp:42)
+         n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 17485045 in 49 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=21
+#-----------
+time=73457127967
+mem_heap_B=1283396133
+mem_heap_extra_B=545545579
+mem_stacks_B=0
+heap_tree=detailed
+n3: 1283396133 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 815154480 0x11798F: allocate (new_allocator.h:127)
+  n1: 815154480 0x11798F: allocate (alloc_traits.h:464)
+   n1: 815154480 0x11798F: _M_allocate_node<const std::piecewise_construct_t &, std::tuple<const int &>, std::tuple<> > (hashtable_policy.h:1873)
+    n1: 815154480 0x11798F: _Scoped_node<const std::piecewise_construct_t &, std::tuple<const int &>, std::tuple<> > (hashtable.h:304)
+     n3: 815154480 0x11798F: std::__detail::_Map_base<int, std::pair<int const, double>, std::allocator<std::pair<int const, double> >, std::__detail::_Select1st, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true>, true>::operator[](int const&) (hashtable_policy.h:707)
+      n1: 469985424 0x1135E7: operator[] (unordered_map.h:980)
+       n1: 469985424 0x1135E7: Flight_map::PageRank(double, int) (src/Flight_map.cpp:140)
+        n0: 469985424 0x10EC0F: main (entry/main.cpp:42)
+      n1: 344288304 0x113657: operator[] (unordered_map.h:980)
+       n1: 344288304 0x113657: Flight_map::PageRank(double, int) (src/Flight_map.cpp:133)
+        n0: 344288304 0x10EC0F: main (entry/main.cpp:42)
+      n0: 880752 in 1 place, below massif's threshold (1.00%)
+ n1: 450756608 0x117B0B: allocate (new_allocator.h:127)
+  n1: 450756608 0x117B0B: allocate (alloc_traits.h:464)
+   n1: 450756608 0x117B0B: _M_allocate_buckets (hashtable_policy.h:1927)
+    n1: 450756608 0x117B0B: _M_allocate_buckets (hashtable.h:440)
+     n1: 450756608 0x117B0B: std::_Hashtable<int, std::pair<int const, double>, std::allocator<std::pair<int const, double> >, std::__detail::_Select1st, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true> >::_M_rehash_aux(unsigned long, std::integral_constant<bool, true>) (hashtable.h:2382)
+      n1: 450756608 0x117A2F: _M_rehash (hashtable.h:2361)
+       n1: 450756608 0x117A2F: std::_Hashtable<int, std::pair<int const, double>, std::allocator<std::pair<int const, double> >, std::__detail::_Select1st, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true> >::_M_insert_unique_node(unsigned long, unsigned long, std::__detail::_Hash_node<std::pair<int const, double>, false>*, unsigned long) (hashtable.h:2021)
+        n3: 450756608 0x1179BB: std::__detail::_Map_base<int, std::pair<int const, double>, std::allocator<std::pair<int const, double> >, std::__detail::_Select1st, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true>, true>::operator[](int const&) (hashtable_policy.h:714)
+         n1: 260358912 0x1135E7: operator[] (unordered_map.h:980)
+          n1: 260358912 0x1135E7: Flight_map::PageRank(double, int) (src/Flight_map.cpp:140)
+           n0: 260358912 0x10EC0F: main (entry/main.cpp:42)
+         n1: 190397696 0x113657: operator[] (unordered_map.h:980)
+          n1: 190397696 0x113657: Flight_map::PageRank(double, int) (src/Flight_map.cpp:133)
+           n0: 190397696 0x10EC0F: main (entry/main.cpp:42)
+         n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 17485045 in 49 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=22
+#-----------
+time=75757386320
+mem_heap_B=1446121413
+mem_heap_extra_B=615470747
+mem_stacks_B=0
+heap_tree=peak
+n3: 1446121413 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 919940040 0x11798F: allocate (new_allocator.h:127)
+  n1: 919940040 0x11798F: allocate (alloc_traits.h:464)
+   n1: 919940040 0x11798F: _M_allocate_node<const std::piecewise_construct_t &, std::tuple<const int &>, std::tuple<> > (hashtable_policy.h:1873)
+    n1: 919940040 0x11798F: _Scoped_node<const std::piecewise_construct_t &, std::tuple<const int &>, std::tuple<> > (hashtable.h:304)
+     n3: 919940040 0x11798F: std::__detail::_Map_base<int, std::pair<int const, double>, std::allocator<std::pair<int const, double> >, std::__detail::_Select1st, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true>, true>::operator[](int const&) (hashtable_policy.h:707)
+      n1: 479343528 0x1135E7: operator[] (unordered_map.h:980)
+       n1: 479343528 0x1135E7: Flight_map::PageRank(double, int) (src/Flight_map.cpp:140)
+        n0: 479343528 0x10EC0F: main (entry/main.cpp:42)
+      n1: 439710048 0x113657: operator[] (unordered_map.h:980)
+       n1: 439710048 0x113657: Flight_map::PageRank(double, int) (src/Flight_map.cpp:133)
+        n0: 439710048 0x10EC0F: main (entry/main.cpp:42)
+      n0: 886464 in 1 place, below massif's threshold (1.00%)
+ n1: 508696328 0x117B0B: allocate (new_allocator.h:127)
+  n1: 508696328 0x117B0B: allocate (alloc_traits.h:464)
+   n1: 508696328 0x117B0B: _M_allocate_buckets (hashtable_policy.h:1927)
+    n1: 508696328 0x117B0B: _M_allocate_buckets (hashtable.h:440)
+     n1: 508696328 0x117B0B: std::_Hashtable<int, std::pair<int const, double>, std::allocator<std::pair<int const, double> >, std::__detail::_Select1st, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true> >::_M_rehash_aux(unsigned long, std::integral_constant<bool, true>) (hashtable.h:2382)
+      n1: 508696328 0x117A2F: _M_rehash (hashtable.h:2361)
+       n1: 508696328 0x117A2F: std::_Hashtable<int, std::pair<int const, double>, std::allocator<std::pair<int const, double> >, std::__detail::_Select1st, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true> >::_M_insert_unique_node(unsigned long, unsigned long, std::__detail::_Hash_node<std::pair<int const, double>, false>*, unsigned long) (hashtable.h:2021)
+        n3: 508696328 0x1179BB: std::__detail::_Map_base<int, std::pair<int const, double>, std::allocator<std::pair<int const, double> >, std::__detail::_Select1st, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true>, true>::operator[](int const&) (hashtable_policy.h:714)
+         n1: 265536504 0x1135E7: operator[] (unordered_map.h:980)
+          n1: 265536504 0x1135E7: Flight_map::PageRank(double, int) (src/Flight_map.cpp:140)
+           n0: 265536504 0x10EC0F: main (entry/main.cpp:42)
+         n1: 243159824 0x113657: operator[] (unordered_map.h:980)
+          n1: 243159824 0x113657: Flight_map::PageRank(double, int) (src/Flight_map.cpp:133)
+           n0: 243159824 0x10EC0F: main (entry/main.cpp:42)
+         n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 17485045 in 49 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=23
+#-----------
+time=78277690988
+mem_heap_B=1447443245
+mem_heap_extra_B=616050843
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=82475786503
+mem_heap_B=1447522157
+mem_heap_extra_B=616088907
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=86674197412
+mem_heap_B=1447620765
+mem_heap_extra_B=616126987
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=90871819146
+mem_heap_B=1447487813
+mem_heap_extra_B=616066075
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=94230174167
+mem_heap_B=1447533557
+mem_heap_extra_B=616096587
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=96748930137
+mem_heap_B=1447609341
+mem_heap_extra_B=616119451
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=100108318043
+mem_heap_B=1447442933
+mem_heap_extra_B=616050715
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=102629120815
+mem_heap_B=1447499117
+mem_heap_extra_B=616073627
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=106337836815
+mem_heap_B=1447549613
+mem_heap_extra_B=616107291
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=108810879979
+mem_heap_B=1447396061
+mem_heap_extra_B=616030635
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=113753300967
+mem_heap_B=1447501997
+mem_heap_extra_B=616075547
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=116224559706
+mem_heap_B=1447535597
+mem_heap_extra_B=616097947
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=118697662137
+mem_heap_B=1447610757
+mem_heap_extra_B=616120395
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=122406003361
+mem_heap_B=1447449293
+mem_heap_extra_B=616054955
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=126113475994
+mem_heap_B=1447521629
+mem_heap_extra_B=616088635
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=128586156289
+mem_heap_B=1447596717
+mem_heap_extra_B=616111035
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=131058117733
+mem_heap_B=1447403877
+mem_heap_extra_B=616034331
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=133530740410
+mem_heap_B=1447452077
+mem_heap_extra_B=616056811
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=136002906630
+mem_heap_B=1447507589
+mem_heap_extra_B=616079275
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=140945473449
+mem_heap_B=1447616301
+mem_heap_extra_B=616124091
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=143418648735
+mem_heap_B=1447437965
+mem_heap_extra_B=616047387
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=145890269743
+mem_heap_B=1447493501
+mem_heap_extra_B=616069867
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=149596898558
+mem_heap_B=1447543949
+mem_heap_extra_B=616103515
+mem_stacks_B=0
+heap_tree=detailed
+n3: 1447543949 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 920888328 0x11798F: allocate (new_allocator.h:127)
+  n1: 920888328 0x11798F: allocate (alloc_traits.h:464)
+   n1: 920888328 0x11798F: _M_allocate_node<const std::piecewise_construct_t &, std::tuple<const int &>, std::tuple<> > (hashtable_policy.h:1873)
+    n1: 920888328 0x11798F: _Scoped_node<const std::piecewise_construct_t &, std::tuple<const int &>, std::tuple<> > (hashtable.h:304)
+     n3: 920888328 0x11798F: std::__detail::_Map_base<int, std::pair<int const, double>, std::allocator<std::pair<int const, double> >, std::__detail::_Select1st, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true>, true>::operator[](int const&) (hashtable_policy.h:707)
+      n1: 479343528 0x1135E7: operator[] (unordered_map.h:980)
+       n1: 479343528 0x1135E7: Flight_map::PageRank(double, int) (src/Flight_map.cpp:140)
+        n0: 479343528 0x10EC0F: main (entry/main.cpp:42)
+      n1: 440247984 0x113657: operator[] (unordered_map.h:980)
+       n1: 440247984 0x113657: Flight_map::PageRank(double, int) (src/Flight_map.cpp:133)
+        n0: 440247984 0x10EC0F: main (entry/main.cpp:42)
+      n0: 1296816 in 3 places, all below massif's threshold (1.00%)
+ n1: 509170576 0x117B0B: allocate (new_allocator.h:127)
+  n1: 509170576 0x117B0B: allocate (alloc_traits.h:464)
+   n1: 509170576 0x117B0B: _M_allocate_buckets (hashtable_policy.h:1927)
+    n1: 509170576 0x117B0B: _M_allocate_buckets (hashtable.h:440)
+     n1: 509170576 0x117B0B: std::_Hashtable<int, std::pair<int const, double>, std::allocator<std::pair<int const, double> >, std::__detail::_Select1st, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true> >::_M_rehash_aux(unsigned long, std::integral_constant<bool, true>) (hashtable.h:2382)
+      n1: 509170576 0x117A2F: _M_rehash (hashtable.h:2361)
+       n1: 509170576 0x117A2F: std::_Hashtable<int, std::pair<int const, double>, std::allocator<std::pair<int const, double> >, std::__detail::_Select1st, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true> >::_M_insert_unique_node(unsigned long, unsigned long, std::__detail::_Hash_node<std::pair<int const, double>, false>*, unsigned long) (hashtable.h:2021)
+        n3: 509170576 0x1179BB: std::__detail::_Map_base<int, std::pair<int const, double>, std::allocator<std::pair<int const, double> >, std::__detail::_Select1st, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true>, true>::operator[](int const&) (hashtable_policy.h:714)
+         n1: 265536504 0x1135E7: operator[] (unordered_map.h:980)
+          n1: 265536504 0x1135E7: Flight_map::PageRank(double, int) (src/Flight_map.cpp:140)
+           n0: 265536504 0x10EC0F: main (entry/main.cpp:42)
+         n1: 243429008 0x113657: operator[] (unordered_map.h:980)
+          n1: 243429008 0x113657: Flight_map::PageRank(double, int) (src/Flight_map.cpp:133)
+           n0: 243429008 0x10EC0F: main (entry/main.cpp:42)
+         n0: 205064 in 3 places, all below massif's threshold (1.00%)
+ n0: 17485045 in 52 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=46
+#-----------
+time=152068970690
+mem_heap_B=1447619085
+mem_heap_extra_B=616125947
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=157010861343
+mem_heap_B=1447496261
+mem_heap_extra_B=616071723
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=159483552702
+mem_heap_B=1447529861
+mem_heap_extra_B=616094123
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=164427438174
+mem_heap_B=1447416749
+mem_heap_extra_B=616039899
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=166558683389
+mem_heap_B=1447455773
+mem_heap_extra_B=616059275
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=168689890028
+mem_heap_B=1447506629
+mem_heap_extra_B=616078635
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=170821137193
+mem_heap_B=1447535597
+mem_heap_extra_B=616097947
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=172953365667
+mem_heap_B=1447606077
+mem_heap_extra_B=616117275
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=175086101003
+mem_heap_B=1447413173
+mem_heap_extra_B=616037499
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=177218800991
+mem_heap_B=1447452197
+mem_heap_extra_B=616056891
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=56
+#-----------
+time=179351515333
+mem_heap_B=1447503125
+mem_heap_extra_B=616076299
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=57
+#-----------
+time=181482995523
+mem_heap_B=1447532117
+mem_heap_extra_B=616095627
+mem_stacks_B=0
+heap_tree=detailed
+n3: 1447532117 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 920876496 0x11798F: allocate (new_allocator.h:127)
+  n1: 920876496 0x11798F: allocate (alloc_traits.h:464)
+   n1: 920876496 0x11798F: _M_allocate_node<const std::piecewise_construct_t &, std::tuple<const int &>, std::tuple<> > (hashtable_policy.h:1873)
+    n1: 920876496 0x11798F: _Scoped_node<const std::piecewise_construct_t &, std::tuple<const int &>, std::tuple<> > (hashtable.h:304)
+     n3: 920876496 0x11798F: std::__detail::_Map_base<int, std::pair<int const, double>, std::allocator<std::pair<int const, double> >, std::__detail::_Select1st, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true>, true>::operator[](int const&) (hashtable_policy.h:707)
+      n1: 479343528 0x1135E7: operator[] (unordered_map.h:980)
+       n1: 479343528 0x1135E7: Flight_map::PageRank(double, int) (src/Flight_map.cpp:140)
+        n0: 479343528 0x10EC0F: main (entry/main.cpp:42)
+      n1: 440247984 0x113657: operator[] (unordered_map.h:980)
+       n1: 440247984 0x113657: Flight_map::PageRank(double, int) (src/Flight_map.cpp:133)
+        n0: 440247984 0x10EC0F: main (entry/main.cpp:42)
+      n0: 1284984 in 3 places, all below massif's threshold (1.00%)
+ n1: 509170576 0x117B0B: allocate (new_allocator.h:127)
+  n1: 509170576 0x117B0B: allocate (alloc_traits.h:464)
+   n1: 509170576 0x117B0B: _M_allocate_buckets (hashtable_policy.h:1927)
+    n1: 509170576 0x117B0B: _M_allocate_buckets (hashtable.h:440)
+     n1: 509170576 0x117B0B: std::_Hashtable<int, std::pair<int const, double>, std::allocator<std::pair<int const, double> >, std::__detail::_Select1st, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true> >::_M_rehash_aux(unsigned long, std::integral_constant<bool, true>) (hashtable.h:2382)
+      n1: 509170576 0x117A2F: _M_rehash (hashtable.h:2361)
+       n1: 509170576 0x117A2F: std::_Hashtable<int, std::pair<int const, double>, std::allocator<std::pair<int const, double> >, std::__detail::_Select1st, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true> >::_M_insert_unique_node(unsigned long, unsigned long, std::__detail::_Hash_node<std::pair<int const, double>, false>*, unsigned long) (hashtable.h:2021)
+        n3: 509170576 0x1179BB: std::__detail::_Map_base<int, std::pair<int const, double>, std::allocator<std::pair<int const, double> >, std::__detail::_Select1st, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true>, true>::operator[](int const&) (hashtable_policy.h:714)
+         n1: 265536504 0x1135E7: operator[] (unordered_map.h:980)
+          n1: 265536504 0x1135E7: Flight_map::PageRank(double, int) (src/Flight_map.cpp:140)
+           n0: 265536504 0x10EC0F: main (entry/main.cpp:42)
+         n1: 243429008 0x113657: operator[] (unordered_map.h:980)
+          n1: 243429008 0x113657: Flight_map::PageRank(double, int) (src/Flight_map.cpp:133)
+           n0: 243429008 0x10EC0F: main (entry/main.cpp:42)
+         n0: 205064 in 3 places, all below massif's threshold (1.00%)
+ n0: 17485045 in 52 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=58
+#-----------
+time=183615543061
+mem_heap_B=1447602597
+mem_heap_extra_B=616114955
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=185746616332
+mem_heap_B=681090589
+mem_heap_extra_B=286853035
+mem_stacks_B=0
+heap_tree=empty
