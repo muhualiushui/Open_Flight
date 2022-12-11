@@ -184,13 +184,13 @@ unordered_map<int, double> Flight_map::PageRank(int max_iter) {
         start[a.first] = 1.0 / total_airports;
     }
 
-    cout << "beginning iterations" << endl;
+    // cout << "beginning iterations" << endl;
 
     unordered_map<int, double> result = start;
 
     // iterations
     for (int i = 0; i < max_iter; i++) {
-        cout << "on iteration " << to_string(i) << endl;
+        // cout << "on iteration " << to_string(i) << endl;
         unordered_map<int, double> next = matrix_multiply(adjcent, result);
         
         // compare results here

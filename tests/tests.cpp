@@ -105,6 +105,17 @@ TEST_CASE("test_matrix_multiply_small") {
     }
 }
 
+TEST_CASE("test_PageRank") {
+    Flight_map* flight = new Flight_map("../Data/PageRank_test_airports.dat", "../Data/PageRank_test_routes.dat", "../Data/PageRank_test_airlines.dat");
+    unordered_map<int, double> m = flight->PageRank(3);
+    
+    REQUIRE(flight->double_compare(m[1], 0.321875));
+    REQUIRE(flight->double_compare(m[2], 0.321875));
+    REQUIRE(flight->double_compare(m[3], 0.11875));
+    REQUIRE(flight->double_compare(m[4], 0.11875));
+    REQUIRE(flight->double_compare(m[5], 0.11875));
+}
+
 TEST_CASE("invalid input 1: same start and end") {
 cout<<"<----------------------------------------------------------->"<<endl;
 
