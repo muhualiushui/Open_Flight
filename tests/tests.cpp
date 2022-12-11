@@ -112,24 +112,11 @@ TEST_CASE("test_matrix_multiply") {
 
 TEST_CASE("test_PageRank") {
     Flight_map* flight = new Flight_map("../Data/PageRank_test_airports.dat", "../Data/PageRank_test_routes.dat", "../Data/PageRank_test_airlines.dat");
-    unordered_map<int, unordered_map<int, double>> A;
+    unordered_map<int, double> m = flight->PageRank(3);
     
-    A = {
-        {0, {{0, 0.0}, {1, 1.0/2}, {2, 1.0/2}, {3, 0.0}}},
-        {1, {{0, 0.0}, {1, 0.0}, {2, 0.0}, {3, 1.0}}},
-        {2, {{0, 1.0/3}, {1, 1.0/3}, {2, 0}, {3, 1.0/3}}},
-        {3, {{0, 0.0}, {1, 0.0}, {2, 1.0}, {3, 0.0}}}};
-    
-    unordered_map<int, double> x = {{0, 1.0/4}, {1, 1.0/4}, {2, 1.0/4}, {3, 1.0/4}};
-    unordered_map<int, double> result1 = {{0, 1.0/12}, {1, 2.5/12}, {2, 4.5/12}, {3, 4.0/12}};
-    unordered_map<int, double> result2 = {{0, 1.5/12}, {1, 2.0/12}, {2, 4.5/12}, {3, 4.0/12}};
-    unordered_map<int, double> x1 = flight->matrix_multiply(A, x);
-    unordered_map<int, double> x2 = flight->matrix_multiply(A, x1);
-
-    for (int i = 0; i < 4; i++) {
-        REQUIRE(flight->double_compare(result1[i], x1[i]));
-    }
-    for (int i = 0; i < 4; i++) {
-        REQUIRE(flight->double_compare(result2[i], x2[i]));
-    }
+    REQUIRE(flight->double_compare(m[1], 0.321875));
+    REQUIRE(flight->double_compare(m[2], 0.321875));
+    REQUIRE(flight->double_compare(m[3], 0.11875));
+    REQUIRE(flight->double_compare(m[4], 0.11875));
+    REQUIRE(flight->double_compare(m[5], 0.11875));
 }

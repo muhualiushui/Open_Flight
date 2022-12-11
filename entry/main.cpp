@@ -40,7 +40,7 @@ int main() {
 
     std::cout << "beginning pagerank" << std::endl;
 
-    std::unordered_map<int, double> m = flight->PageRank(30);
+    // std::unordered_map<int, double> m = flight->PageRank(30);
     // for (auto& i : m) {
     //     cout << "airport" << i.first << endl;
     //     cout << "rank" << i.second << endl;
@@ -49,11 +49,17 @@ int main() {
     //     //     break;
     //     // }
     // }
-    flight->write_to_file("../Output/PageRank_output.txt", m);
+    // flight->write_to_file("../Output/PageRank_output.txt", m);
 
     // cout << "airport 1 rank: " << endl;
     // cout << m[1] << endl;
 
     // Flight_map* pg_flight = new Flight_map("../Data/PageRank_test_airports.dat", "../Data/PageRank_test_routes.dat", "../Data/PageRank_test_airlines.dat");
+    // std::unordered_map<int, double> m = pg_flight->PageRank(3);
+    // for (auto& i : m) {
+    //     cout << "airport :" << i.first << endl;
+    //     cout << "rank :" << i.second << endl;
+    // }
+
     return 0;
 }
