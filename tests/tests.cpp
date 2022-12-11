@@ -42,6 +42,49 @@ TEST_CASE("BFS successfully") {
     REQUIRE(result == toCompare);
 }
 
+TEST_CASE("Full BFS successfully1") {
+    Flight_map *map = new Flight_map("../Data/airports.dat", "../Data/routes.dat", "../Data/airlines.dat");
+    vector<int> result = map->BFS(3830);
+    vector<int> toCompare;
+    ifstream TheText("../tests/Full_BFS_Sucess1.txt");
+    string word;
+    if (TheText.is_open()) {
+        while (getline(TheText, word)) {
+            toCompare.push_back(stoi(word));
+        }
+    }
+    REQUIRE(result == toCompare);
+}
+
+TEST_CASE("Full BFS successfully2") {
+    Flight_map *map = new Flight_map("../Data/airports.dat", "../Data/routes.dat", "../Data/airlines.dat");
+    vector<int> result = map->BFS(6740);
+    vector<int> toCompare;
+    ifstream TheText("../tests/Full_BFS_Sucess2.txt");
+    string word;
+    if (TheText.is_open()) {
+        while (getline(TheText, word)) {
+            toCompare.push_back(stoi(word));
+        }
+    }
+    REQUIRE(result == toCompare);
+}
+
+TEST_CASE("Full BFS can't find a path") {
+    Flight_map *map = new Flight_map("../Data/airports.dat", "../Data/routes.dat", "../Data/airlines.dat");
+    vector<int> result = map->BFS(4540);
+    vector<int> toCompare;
+    toCompare.push_back(4540);
+    REQUIRE(result == toCompare);
+}
+
+TEST_CASE("Full BFS out of data") {
+    Flight_map *map = new Flight_map("../Data/airports.dat", "../Data/routes.dat", "../Data/airlines.dat");
+    vector<int> result = map->BFS(20000);
+    vector<int> toCompare;
+    REQUIRE(result == toCompare);
+}
+
 // PageRank
 TEST_CASE("test_matrix_multiply_small") {
     Flight_map* flight = new Flight_map("../Data/airports.dat", "../Data/routes.dat", "../Data/airlines.dat");
