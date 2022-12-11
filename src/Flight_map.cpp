@@ -116,12 +116,16 @@ vector<int> Flight_map::Dijstras(int start,int end){
         parent[i->ID]=-1;
         q.push(i);
     }
+    if(parent.find(end)==parent.end()|| parent.find(start)==parent.end()) return vector<int>();
     q.change(start,0);
+    bool find=false;
     for(auto count:all_data->getVertices()){
         auto v = q.pop();
-        cout<<v->name<<":"<<endl;
         auto neigbors=all_routes[v->ID];
         for(auto neigbor:neigbors){//first: ID of destination; second: route which consisted distance
+        if(!all_data->searchAirports(neigbor.first)){
+            continue;
+        }
         double new_cost=neigbor.second->distance+v->cost;
             if(new_cost<all_data->searchAirports(neigbor.first)->cost){
                 q.change(neigbor.first,new_cost);
@@ -135,6 +139,7 @@ vector<int> Flight_map::Dijstras(int start,int end){
         path.push(route);
         route=parent[route];
     }
+    path.push(route);
     while(!path.empty()){
         answer.push_back(path.top());
         path.pop();
@@ -179,13 +184,13 @@ unordered_map<int, double> Flight_map::PageRank(int max_iter) {
         start[a.first] = 1.0 / total_airports;
     }
 
-    // cout << "beginning iterations" << endl;
+    cout << "beginning iterations" << endl;
 
     unordered_map<int, double> result = start;
 
     // iterations
     for (int i = 0; i < max_iter; i++) {
-        // cout << "on iteration " << to_string(i) << endl;
+        cout << "on iteration " << to_string(i) << endl;
         unordered_map<int, double> next = matrix_multiply(adjcent, result);
         
         // compare results here
@@ -226,13 +231,4 @@ bool Flight_map::double_compare(double double1, double double2) {
       return true;
     else
       return false;
-}
-
-void Flight_map::write_to_file(string filename, const unordered_map<int, double>& airport_rank) {
-    ofstream out(filename);
-    for (auto& a : airport_rank) {
-        out << "airport: " << a.first << '\n';
-        out << "rank: " << a.second * 100000 << '\n';
-    }
-    out.close();
 }

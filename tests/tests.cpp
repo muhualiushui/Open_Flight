@@ -3,34 +3,28 @@
 
 #include <fstream>
 using namespace std;
+Flight_map* flight = new Flight_map("../Data/airports.dat", "../Data/routes.dat", "../Data/airlines.dat");
 TEST_CASE("data") {
-    Transform data;
-    data.InsertAirports("../Data/airports.dat");
-    data.InsertAirlines("../Data/airlines.dat");
-    // data.InsertRoutes("../Data/routes.dat");
-    data.printAirports(100,110);
-    data.printAirlins(0,10);
-    // data.printRoutes(10,20);
+    cout<<"Data example: "<<endl;
+    flight->get_Data()->printAirports(1120,1124);
+    flight->get_Data()->printRoutes(1120,1124);
 
 }
-
 TEST_CASE("BFS itself") {
-    Flight_map *map = new Flight_map("../Data/airports.dat", "../Data/routes.dat", "../Data/airlines.dat");
-    vector<int> result = map->findPath(3830,3830);
+    vector<int> result = flight->findPath(3830,3830);
     vector<int> toCompare = {3830};
     REQUIRE(result == toCompare);
 }
 
 TEST_CASE("BFS out of data") {
-    Flight_map *map = new Flight_map("../Data/airports.dat", "../Data/routes.dat", "../Data/airlines.dat");
-    vector<int> result = map->findPath(14900,20000);
+    vector<int> result = flight->findPath(14900,20000);
     vector<int> toCompare;
     REQUIRE(result == toCompare);
 }
 
 TEST_CASE("BFS successfully") {
-    Flight_map *map = new Flight_map("../Data/airports.dat", "../Data/routes.dat", "../Data/airlines.dat");
-    vector<int> result = map->findPath(3830,4042);
+     
+    vector<int> result = flight->findPath(3830,4042);
     vector<int> toCompare;
     ifstream TheText("../tests/BFS_Sucess.txt");
     string word;
@@ -43,8 +37,8 @@ TEST_CASE("BFS successfully") {
 }
 
 TEST_CASE("Full BFS successfully1") {
-    Flight_map *map = new Flight_map("../Data/airports.dat", "../Data/routes.dat", "../Data/airlines.dat");
-    vector<int> result = map->BFS(3830);
+     
+    vector<int> result = flight->BFS(3830);
     vector<int> toCompare;
     ifstream TheText("../tests/Full_BFS_Sucess1.txt");
     string word;
@@ -57,8 +51,8 @@ TEST_CASE("Full BFS successfully1") {
 }
 
 TEST_CASE("Full BFS successfully2") {
-    Flight_map *map = new Flight_map("../Data/airports.dat", "../Data/routes.dat", "../Data/airlines.dat");
-    vector<int> result = map->BFS(6740);
+     
+    vector<int> result = flight->BFS(6740);
     vector<int> toCompare;
     ifstream TheText("../tests/Full_BFS_Sucess2.txt");
     string word;
@@ -71,25 +65,26 @@ TEST_CASE("Full BFS successfully2") {
 }
 
 TEST_CASE("Full BFS can't find a path") {
-    Flight_map *map = new Flight_map("../Data/airports.dat", "../Data/routes.dat", "../Data/airlines.dat");
-    vector<int> result = map->BFS(4540);
+    vector<int> result = flight->BFS(4540);
     vector<int> toCompare;
     toCompare.push_back(4540);
+    for(auto i: result){
+        cout<<i<<endl;
+    }
+    cout<<"No more path"<<endl;
     REQUIRE(result == toCompare);
 }
 
 TEST_CASE("Full BFS out of data") {
-    Flight_map *map = new Flight_map("../Data/airports.dat", "../Data/routes.dat", "../Data/airlines.dat");
-    vector<int> result = map->BFS(20000);
+     
+    vector<int> result = flight->BFS(20000);
     vector<int> toCompare;
     REQUIRE(result == toCompare);
 }
 
 // PageRank
-TEST_CASE("test_matrix_multiply") {
-    Flight_map* flight = new Flight_map("../Data/airports.dat", "../Data/routes.dat", "../Data/airlines.dat");
+TEST_CASE("test_matrix_multiply_small") {
     unordered_map<int, unordered_map<int, double>> A;
-    
     A = {
         {0, {{0, 0.0}, {1, 1.0/2}, {2, 1.0/2}, {3, 0.0}}},
         {1, {{0, 0.0}, {1, 0.0}, {2, 0.0}, {3, 1.0}}},
@@ -110,13 +105,69 @@ TEST_CASE("test_matrix_multiply") {
     }
 }
 
-TEST_CASE("test_PageRank") {
-    Flight_map* flight = new Flight_map("../Data/PageRank_test_airports.dat", "../Data/PageRank_test_routes.dat", "../Data/PageRank_test_airlines.dat");
-    unordered_map<int, double> m = flight->PageRank(3);
-    
-    REQUIRE(flight->double_compare(m[1], 0.321875));
-    REQUIRE(flight->double_compare(m[2], 0.321875));
-    REQUIRE(flight->double_compare(m[3], 0.11875));
-    REQUIRE(flight->double_compare(m[4], 0.11875));
-    REQUIRE(flight->double_compare(m[5], 0.11875));
+TEST_CASE("invalid input 1: same start and end") {
+cout<<"<----------------------------------------------------------->"<<endl;
+
+cout<<"The Following test is relate to Dijstras:"<<endl;
+    cout<<"Invalid Test:"<<endl;
+    auto answer=flight->Dijstras(3384,3384);
+    REQUIRE(answer.empty());
+    cout<<"invalid from Airport: 3384 to 3384"<<endl;
+cout <<"<----------------------------------------------------------->"<<endl;
 }
+
+TEST_CASE("invalid input 2: Wrong ID") {
+    auto answer=flight->Dijstras(3384,9999);
+    REQUIRE(answer.empty());
+    cout<<"invalid from Airport: 3384 to 9999"<<endl;
+cout <<"<----------------------------------------------------------->"<<endl;
+
+}
+
+TEST_CASE("invalid input 2: ID with /N") {
+    auto answer=flight->Dijstras(3384,2223);
+    REQUIRE(answer.empty());
+    cout<<"invalid from Airport: 3384 to 2223"<<endl;
+cout <<"<----------------------------------------------------------->"<<endl;
+
+}
+
+TEST_CASE("valid output 1: Nanchang to Champagin") {
+    cout<<"Valid Test: "<<endl;
+    auto answer=flight->Dijstras(3384,4049);
+    cout<<"The shortest path from Nanchang to Champagin will be:"<<endl;
+    for(size_t i=0;i<answer.size();i++){
+        auto* location=flight->get_Data()->searchAirports(answer[i]);
+        cout<<location->country<<": ";
+        cout<<location->name<<""<<endl;
+    }
+cout <<"<----------------------------------------------------------->"<<endl;
+
+}
+
+TEST_CASE("valid output 2: ORD to CMI") {
+    auto answer=flight->Dijstras(3830,4049);
+    vector<int> should={4049};
+    cout<<"The shortest path from Chicago to Champagin will be:"<<endl;
+    double sum=0;
+    for(size_t i=0;i<answer.size();i++){
+        auto* location=flight->get_Data()->searchAirports(answer[i]);
+        cout<<location->country<<": ";
+        cout<<location->name<<""<<endl;
+    }
+cout <<"<----------------------------------------------------------->"<<endl;
+}
+
+TEST_CASE("valid output 3: PEK to CMI") {
+    auto answer=flight->Dijstras(3364,4049);
+    vector<int> should={4049};
+    cout<<"The shortest path from Peking to Champagin will be:"<<endl;
+    double sum=0;
+    for(size_t i=0;i<answer.size();i++){
+        auto* location=flight->get_Data()->searchAirports(answer[i]);
+        cout<<location->country<<": ";
+        cout<<location->name<<""<<endl;
+    }
+cout <<"<----------------------------------------------------------->"<<endl;
+}
+

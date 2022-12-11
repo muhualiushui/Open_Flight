@@ -2,8 +2,6 @@
 
 #include <vector>
 #include <unordered_map>
-#include <fstream>
-#include <iostream>
 
 /**
  * class purpose:
@@ -44,10 +42,6 @@ class Flight_map: public Transform{
     //Dijkstra's
     vector<int> Dijstras(int start,int end);
     Transform* get_Data(){return all_data;};
-    void Clean(){
-        delete all_data;
-        all_data=nullptr;
-    };
     
     // PageRank
     unordered_map<int, double> PageRank(int max_iter);
@@ -55,7 +49,6 @@ class Flight_map: public Transform{
     double l2_norm(vector<double> const& v);
     unordered_map<int, double> matrix_multiply(const unordered_map<int, unordered_map<int, double>>& A, const unordered_map<int, double>& x);
     bool double_compare(double double1, double double2);
-    void write_to_file(string filename, const unordered_map<int, double>& airport_rank);
     
     private:
     Transform* all_data;//initial database 

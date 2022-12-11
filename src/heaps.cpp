@@ -10,6 +10,9 @@ void Heap::change(int position,double new_cost){
         if(i->ID==position)break;
         idx++;
     }
+    if(size_t(idx)>=data.size()){
+        return;
+    }
     data[idx]->cost=new_cost;
     heapifyDown(idx);
     heapifyUp(idx);
