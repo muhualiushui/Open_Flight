@@ -20,20 +20,9 @@ class Flight_map: public Transform{
     Flight_map(){};
     Flight_map(string Airports, string Routes, string Airlines);
     void construct_map();
-    // struct Edge{ which you guys prefer? route or a specific Edge
-    //     string origin;
-    //     string destination;
-    //     double distance;
-    // };
-    // Edge would require less storage 
     Routes* getEdge(int source_id, int des_id);
 
     map<int,map<int,Routes*>> getAllRoutes();
-    /**
-     * To implement BFS
-     * Dijkstra’s Algorithm
-     * PageRank at here
-     */
     
     //BFS
     vector<int> BFS(int startID);
@@ -45,13 +34,13 @@ class Flight_map: public Transform{
     
     // PageRank
     unordered_map<int, double> PageRank(int max_iter);
+
     // PageRank helper
-    double l2_norm(vector<double> const& v);
     unordered_map<int, double> matrix_multiply(const unordered_map<int, unordered_map<int, double>>& A, const unordered_map<int, double>& x);
     bool double_compare(double double1, double double2);
     void write_to_file(string filename, const unordered_map<int, double>& airport_rank);
     
     private:
-    Transform* all_data;//initial database 
-    map<int,map<int,Routes*>> all_routes;// first int corresponding to origin id, second int corresponding to destination 
+    Transform* all_data;                    // initial database 
+    map<int,map<int,Routes*>> all_routes;   // first int corresponding to origin id, second int corresponding to destination 
 };

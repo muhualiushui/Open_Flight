@@ -201,14 +201,6 @@ unordered_map<int, double> Flight_map::PageRank(int max_iter) {
     return result;
 }
 
-double Flight_map::l2_norm(vector<double> const& v) {
-    double total = 0.;
-    for (double value : v) {
-        total += value * value;
-    }
-    return sqrt(total);
-}
-
 unordered_map<int, double> Flight_map::matrix_multiply(const unordered_map<int, unordered_map<int, double>>& A, const unordered_map<int, double>& x) {
     unordered_map<int, double> result;
     for (auto& i : x) {
@@ -223,6 +215,7 @@ unordered_map<int, double> Flight_map::matrix_multiply(const unordered_map<int, 
     return result;
 }
 
+
 bool Flight_map::double_compare(double double1, double double2) {
     const auto relative_difference_factor = 0.0001;    // 0.01%
     const auto greater_magnitude = max(abs(double1), abs(double2));
@@ -233,6 +226,7 @@ bool Flight_map::double_compare(double double1, double double2) {
       return false;
 }
 
+// write the output map of PageRank to a given file
 void Flight_map::write_to_file(string filename, const unordered_map<int, double>& airport_rank) {
     ofstream out(filename);
     for (auto& a : airport_rank) {
