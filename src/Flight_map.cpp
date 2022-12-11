@@ -227,3 +227,12 @@ bool Flight_map::double_compare(double double1, double double2) {
     else
       return false;
 }
+
+void Flight_map::write_to_file(string filename, const unordered_map<int, double>& airport_rank) {
+    ofstream out(filename);
+    for (auto& a : airport_rank) {
+        out << "airport: " << a.first << '\n';
+        out << "rank: " << a.second * 100000 << '\n';
+    }
+    out.close();
+}
