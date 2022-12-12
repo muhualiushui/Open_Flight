@@ -7,7 +7,7 @@
 ### PageRank Algorithm
 The PageRank funtion takes in one parameter which is the iteration number that the user likes to set to. The larger iteration number produces smaller error. Then the function calculates the importance rank for each airport and outputs a map to store all the rank. There is helper writeToFile function for the PageRank to write the map into a txt file. The running time is $O(N^2)$, where the N is the total number of airports.    
 
-Here is a sample PageRank visualization:    
+Here is a sample of PageRank visualization:    
 
 ``airport: 3380``   
 ``rank: 32.039``   
@@ -19,6 +19,8 @@ Here is a sample PageRank visualization:
 ``rank: 0.0104119``   
 ``airport: 12037``   
 ``rank: 0.0104119``
+
+The larger rank number means that the airport is more important.
 
 The full visualization output is in ./Output/PageRank_output.txt.    
 
