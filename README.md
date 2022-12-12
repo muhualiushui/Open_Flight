@@ -45,7 +45,7 @@ Our function is called Open_Flight which could provide the shortest path for you
 
 After you prepare your data properly, you can begin to use our function. Only one step needed is to construct a Flight_map class with input from Data by following sequence: Airports, Routes, and Airline. Then you can call 3 different function:
 1. BFS(int start): input:  source Airports ID    
-it will return all possible airport the input airports could arrive base on the routes data    
+It will return all possible airport the input airports could arrive base on the routes data    
 The position of output is decided by you, get the result from the BFS which is stored in a vector and output in any place you want by the writeToFile function.    
 	
 2. Dijkstras(int start, int end): input:  source Airports ID and destination ID    
